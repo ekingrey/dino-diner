@@ -1,4 +1,9 @@
-﻿using System;
+﻿///Name: Ethan Kingrey
+///Brontowurst.cs
+/// Description: this class is used to order the Brontowurst. it allows the user to remove ingredients
+/// and also holds the information about its price, calories, and ingredients.
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

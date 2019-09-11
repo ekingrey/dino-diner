@@ -1,4 +1,9 @@
-﻿using System.Collections.Generic;
+﻿///Name: Ethan Kingrey
+///PrehistoricPBJ.cs
+/// Description: this class is used to order the Prehistoric PBJ. it allows the user to remove ingredients
+/// and also holds the information about its price, calories, and ingredients.
+/// 
+using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
