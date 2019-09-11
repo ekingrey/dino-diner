@@ -10,10 +10,17 @@ namespace DinoDiner.Menu.Entrees
 {
     public class PterodactylWings
     {
-        
+        /// <summary>
+        /// holds the price of the menue item
+        /// </summary>
         public double Price { get; set; }
+        /// <summary>
+        /// holds the calories of the menue item
+        /// </summary>
         public uint Calories { get; set; }
-
+        /// <summary>
+        /// a list of all the ingredients of the menue item
+        /// </summary>
         public List<string> Ingredients
         {
             get

@@ -12,10 +12,17 @@ namespace DinoDiner.Menu.Entrees
     public class Brontowurst
     {
         private bool bun = true, peppers = true, onions = true;
-
+        /// <summary>
+        /// holds the price of the menue item
+        /// </summary>
         public double Price { get; set; }
+        /// <summary>
+        /// holds the calories of the menue item
+        /// </summary>
         public uint Calories { get; set; }
-
+        /// <summary>
+        /// a list of all the ingredients of the menue item
+        /// </summary>
         public List<string> Ingredients
         {
             get
@@ -27,7 +34,9 @@ namespace DinoDiner.Menu.Entrees
                 return ingredients;
             }
         }
-
+        /// <summary>
+        /// sets the price and Calories of the menue item
+        /// </summary>
         public Brontowurst()
         {
             this.Price = 5.36;
