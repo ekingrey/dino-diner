@@ -26,17 +26,26 @@ namespace DinoDiner.Menu.Entrees
             }
         }
 
+        /// <summary>
+        /// sets the price and Calories of the menue item
+        /// </summary>
         public PrehistoricPBJ()
         {
             this.Price = 6.52;
             this.Calories = 483;
         }
 
+        /// <summary>
+        /// takes peanut butter off the sandwich
+        /// </summary>
         public void HoldPeanutButter()
         {
             this.peanutButter = false;
         }
 
+        /// <summary>
+        /// takes jelly off the sandwich
+        /// </summary>
         public void HoldJelly()
         {
             this.jelly = false;

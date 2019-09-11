@@ -23,7 +23,9 @@ namespace DinoDiner.Menu.Entrees
                 return ingredients;
             }
         }
-
+        /// <summary>
+        /// sets the price and Calories of the menue item
+        /// </summary>
         public PterodactylWings()
         {
             this.Price = 7.21;

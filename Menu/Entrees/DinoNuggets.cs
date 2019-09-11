@@ -20,18 +20,29 @@ namespace DinoDiner.Menu.Entrees
         {
             get
             {
-                List<string> ingredients = new List<string>() { "Chicken Nugget" };
+                List<string> ingredients = new List<string>();
+                for (int i =0; i< nuggetCount; i++)
+                {
+                    ingredients.Add( "Chicken Nugget" );
+                }
+                
                 
                 return ingredients;
             }
         }
 
+        /// <summary>
+        /// sets the price and Calories of the menue item
+        /// </summary>
         public DinoNuggets()
         {
             this.Price = 4.25;
             this.Calories = 59 * nuggetCount;
         }
 
+        /// <summary>
+        /// adds one nugget the the custumers order
+        /// </summary>
         public void AddNugget()
         {
             nuggetCount++;

@@ -35,21 +35,30 @@ namespace DinoDiner.Menu.Entrees
             this.Calories = 621;
         }
 
+        /// <summary>
+        /// takes the bun off the burger
+        /// </summary>
         public void HoldBun()
         {
             this.bun = false;
         }
-
+        /// <summary>
+        /// takes pickles off the burger
+        /// </summary>
         public void HoldPickle()
         {
             this.pickle = false;
         }
-
+        /// <summary>
+        /// takes ketchup off the burger
+        /// </summary>
         public void HoldKetchup()
         {
             this.ketchup = false;
         }
-
+        /// <summary>
+        /// takes mustard off the burger
+        /// </summary>
         public void HoldMustard()
         {
             this.mustard = false;

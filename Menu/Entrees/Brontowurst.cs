@@ -33,17 +33,23 @@ namespace DinoDiner.Menu.Entrees
             this.Price = 5.36;
             this.Calories = 498;
         }
-
+        /// <summary>
+        /// takes the bun off
+        /// </summary>
         public void HoldBun()
         {
             this.bun = false;
         }
-
+        /// <summary>
+        /// takes the peppers off
+        /// </summary>
         public void HoldPeppers()
         {
             this.peppers = false;
         }
-
+        /// <summary>
+        /// takes the onions off
+        /// </summary>
         public void HoldOnion()
         {
             this.onions = false;
