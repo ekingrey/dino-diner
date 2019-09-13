@@ -1,6 +1,6 @@
 ﻿///Name: Ethan Kingrey
 ///SteakosaurusBurger.cs
-/// Description: this class is used to order the Steakosaurus burger. it allows the user to remove ingredients
+/// Description: this class is used to order the TRex King Burger burger. it allows the user to remove ingredients
 /// and also holds the information about its price, calories, and ingredients.
 
 using System;
