@@ -14,7 +14,7 @@ namespace DinoDiner.Menu.Sides
 
     public abstract class Side
     {
-        /// <summary>
+        /// <summary> 
         /// Gets and sets the price
         /// </summary>
         public double Price { get; set; }
