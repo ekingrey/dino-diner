@@ -1,7 +1,6 @@
-﻿///Name: Ethan Kingrey
-///DinoNuggets.cs
-/// Description: this class is used to order the Dino nuggets. it allows the user to add more nuggets
-/// and also holds the information about its price, calories, and ingredients.
+﻿/*DinoNuggets.cs
+ * Author: Ethan Kingrey
+ */
 
 using System;
 using System.Collections.Generic;

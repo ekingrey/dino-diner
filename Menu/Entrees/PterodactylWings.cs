@@ -1,7 +1,6 @@
-﻿///Name: Ethan Kingrey
-///PterodactylWings.cs
-/// Description: this class is used to order the Pterodactyl Wings. it holds the information about its price, calories, and ingredients.
-
+﻿/*PterodactyWings.cs
+ * Author: Ethan Kingrey
+ */
 using System;
 using System.Collections.Generic;
 using System.Text;

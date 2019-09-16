@@ -1,8 +1,6 @@
-﻿///Name: Ethan Kingrey
-///TRexKingBurger.cs
-/// Description: this class is used to order the TRex King Burger burger. it allows the user to remove ingredients
-/// and also holds the information about its price, calories, and ingredients.
-
+﻿/*TRexKingBurger.cs
+ * Author: Ethan Kingrey
+ */
 using System;
 using System.Collections.Generic;
 using System.Text;

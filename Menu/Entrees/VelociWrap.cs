@@ -1,7 +1,6 @@
-﻿///Name: Ethan Kingrey
-///VelociWrap.cs
-/// Description: this class is used to order the VelociWrap. it allows the user to remove ingredients
-/// and also holds the information about its price, calories, and ingredients.
+﻿/*Velociwrap.cs
+ * Author: Ethan Kingrey
+ */
 
 using System;
 using System.Collections.Generic;
