@@ -10,11 +10,11 @@ namespace DinoDiner.Menu.Entrees
         private bool peanutButter = true;
         private bool jelly = true;
         /// <summary>
-        /// holds the price of the menue item
+        /// gets or sets the price
         /// </summary>
         public double Price { get; set; }
         /// <summary>
-        /// holds the calories of the menue item
+        /// gets or sets the Calories
         /// </summary>
         public uint Calories { get; set; }
         /// <summary>

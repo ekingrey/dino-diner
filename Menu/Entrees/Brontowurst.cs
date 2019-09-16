@@ -11,11 +11,11 @@ namespace DinoDiner.Menu.Entrees
     {
         private bool bun = true, peppers = true, onions = true;
         /// <summary>
-        /// holds the price of the menue item
+        /// gets or sets the price
         /// </summary>
         public double Price { get; set; }
         /// <summary>
-        /// holds the calories of the menue item
+        /// gets or sets the Calories
         /// </summary>
         public uint Calories { get; set; }
         /// <summary>
