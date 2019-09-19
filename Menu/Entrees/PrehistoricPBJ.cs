@@ -5,31 +5,31 @@ using System.Collections.Generic;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class PrehistoricPBJ
+    public class PrehistoricPBJ : Entrees
     {
-        private bool peanutButter = true;
-        private bool jelly = true;
-        /// <summary>
-        /// gets or sets the price
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// gets or sets the Calories
-        /// </summary>
-        public uint Calories { get; set; }
-        /// <summary>
-        /// a list of all the ingredients of the menue item
-        /// </summary>
-        public List<string> Ingredients
-        {
-            get
-            {
-                List<string> ingredients = new List<string>() { "Bread" };
-                if (peanutButter) ingredients.Add("Peanut Butter");
-                if (jelly) ingredients.Add("Jelly");
-                return ingredients;
-            }
-        }
+        //private bool peanutButter = true;
+        //private bool jelly = true;
+        ///// <summary>
+        ///// gets or sets the price
+        ///// </summary>
+        //public double Price { get; set; }
+        ///// <summary>
+        ///// gets or sets the Calories
+        ///// </summary>
+        //public uint Calories { get; set; }
+        ///// <summary>
+        ///// a list of all the ingredients of the menue item
+        ///// </summary>
+        //public List<string> Ingredients
+        //{
+        //    get
+        //    {
+        //        List<string> ingredients = new List<string>() { "Bread" };
+        //        if (peanutButter) ingredients.Add("Peanut Butter");
+        //        if (jelly) ingredients.Add("Jelly");
+        //        return ingredients;
+        //    }
+        //}
 
         /// <summary>
         /// sets the price and Calories of the menue item
@@ -38,6 +38,10 @@ namespace DinoDiner.Menu.Entrees
         {
             this.Price = 6.52;
             this.Calories = 483;
+
+            ingredients.Add("Peanut Butter");
+            ingredients.Add("Jelly");
+            ingredients.Add("Bread");
         }
 
         /// <summary>
@@ -45,7 +49,8 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public void HoldPeanutButter()
         {
-            this.peanutButter = false;
+            ingredients.Remove("Peanut Butter");
+            
         }
 
         /// <summary>
@@ -53,7 +58,8 @@ namespace DinoDiner.Menu.Entrees
         /// </summary>
         public void HoldJelly()
         {
-            this.jelly = false;
+            
+            ingredients.Remove("Jelly");
         }
     }
 }

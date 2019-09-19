@@ -7,28 +7,28 @@ using System.Text;
 
 namespace DinoDiner.Menu.Entrees
 {
-    public class PterodactylWings
+    public class PterodactylWings : Entrees
     {
-        /// <summary>
-        /// gets or sets the price
-        /// </summary>
-        public double Price { get; set; }
-        /// <summary>
-        /// gets or sets the Calories
-        /// </summary>
-        public uint Calories { get; set; }
-        /// <summary>
-        /// a list of all the ingredients of the menue item
-        /// </summary>
-        public List<string> Ingredients
-        {
-            get
-            {
-                List<string> ingredients = new List<string>() { "Chicken", "Wing Sauce" };
+        ///// <summary>
+        ///// gets or sets the price
+        ///// </summary>
+        //public double Price { get; set; }
+        ///// <summary>
+        ///// gets or sets the Calories
+        ///// </summary>
+        //public uint Calories { get; set; }
+        ///// <summary>
+        ///// a list of all the ingredients of the menue item
+        ///// </summary>
+        //public List<string> Ingredients
+        //{
+        //    get
+        //    {
+        //        List<string> ingredients = new List<string>() { "Chicken", "Wing Sauce" };
                 
-                return ingredients;
-            }
-        }
+        //        return ingredients;
+        //    }
+        //}
         /// <summary>
         /// sets the price and Calories of the menue item
         /// </summary>
@@ -36,6 +36,10 @@ namespace DinoDiner.Menu.Entrees
         {
             this.Price = 7.21;
             this.Calories = 318;
+
+            ingredients.Add("Chicken");
+            ingredients.Add("Wing Sauce");
+
         }
 
         
