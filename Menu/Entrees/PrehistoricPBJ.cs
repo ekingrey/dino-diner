@@ -7,29 +7,7 @@ namespace DinoDiner.Menu.Entrees
 {
     public class PrehistoricPBJ : Entrees
     {
-        //private bool peanutButter = true;
-        //private bool jelly = true;
-        ///// <summary>
-        ///// gets or sets the price
-        ///// </summary>
-        //public double Price { get; set; }
-        ///// <summary>
-        ///// gets or sets the Calories
-        ///// </summary>
-        //public uint Calories { get; set; }
-        ///// <summary>
-        ///// a list of all the ingredients of the menue item
-        ///// </summary>
-        //public List<string> Ingredients
-        //{
-        //    get
-        //    {
-        //        List<string> ingredients = new List<string>() { "Bread" };
-        //        if (peanutButter) ingredients.Add("Peanut Butter");
-        //        if (jelly) ingredients.Add("Jelly");
-        //        return ingredients;
-        //    }
-        //}
+        
 
         /// <summary>
         /// sets the price and Calories of the menue item

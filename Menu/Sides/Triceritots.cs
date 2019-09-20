@@ -11,6 +11,9 @@ namespace DinoDiner.Menu.Sides
     public class Triceritots : Side
     {
         private Size size;
+        /// <summary>
+        /// gets or sets the size of the side
+        /// </summary>
         public override Size Size
         {
             
@@ -36,8 +39,10 @@ namespace DinoDiner.Menu.Sides
             get { return size; }
         }
 
-            
-            
+
+        /// <summary>
+        /// sets the price, calories, and adds the ingredianets to a list
+        /// </summary>
         public Triceritots()
         {
             Price = 0.99;

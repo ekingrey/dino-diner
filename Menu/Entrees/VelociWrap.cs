@@ -10,29 +10,7 @@ namespace DinoDiner.Menu.Entrees
 {
     public class VelociWrap : Entrees
     {
-        //private bool dressing = true, lettuce = true, cheese = true;
-        ///// <summary>
-        ///// gets or sets the price
-        ///// </summary>
-        //public double Price { get; set; }
-        ///// <summary>
-        ///// gets or sets the Calories
-        ///// </summary>
-        //public uint Calories { get; set; }
-        ///// <summary>
-        ///// a list of all the ingredients of the menue item
-        ///// </summary>
-        //public List<string> Ingredients
-        //{
-        //    get
-        //    {
-        //        List<string> ingredients = new List<string>() { "Flour Tortilla", "Chicken Breast" };
-        //        if (dressing) ingredients.Add("Ceasar Dressing");
-        //        if (lettuce) ingredients.Add("Romaine Lettuce");
-        //        if (cheese) ingredients.Add("Parmesan Cheese");
-        //        return ingredients;
-        //    }
-        //}
+        
 
         /// <summary>
         /// sets the price and Calories of the menue item

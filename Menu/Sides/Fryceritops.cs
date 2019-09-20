@@ -11,6 +11,9 @@ namespace DinoDiner.Menu.Sides
     public class Fryceritops : Side
     {
         private Size size;
+        /// <summary>
+        /// gets or sets the size of the side
+        /// </summary>
         public override Size Size
         {
 
@@ -37,7 +40,9 @@ namespace DinoDiner.Menu.Sides
         }
 
 
-
+        /// <summary>
+        /// sets the price, calories, and adds the ingredianets to a list
+        /// </summary>
         public Fryceritops()
         {
             Price = 0.99;

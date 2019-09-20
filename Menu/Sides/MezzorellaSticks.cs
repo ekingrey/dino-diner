@@ -11,6 +11,10 @@ namespace DinoDiner.Menu.Sides
     public class MezzorellaSticks : Side
     {
         private Size size;
+
+        /// <summary>
+        /// gets or sets the size of the side
+        /// </summary>
         public override Size Size
         {
 
@@ -37,7 +41,9 @@ namespace DinoDiner.Menu.Sides
         }
 
 
-
+        /// <summary>
+        /// sets the price, calories, and adds the ingredianets to a list
+        /// </summary>
         public MezzorellaSticks()
         {
             Price = 0.99;

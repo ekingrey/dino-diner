@@ -9,36 +9,7 @@ namespace DinoDiner.Menu.Entrees
 {
     public class TRexKingBurger :Entrees 
     {
-        //private bool bun = true, pickle = true, ketchup = true, mustard = true, lettuce = true, tomato = true, onion = true, mayo = true;
-        /// <summary>
-        /// gets or sets the price
-        /// </summary>
-        //public double Price { get; set; }
-        /// <summary>
-        /// gets or sets the Calories
-        /// </summary>
-        //public uint Calories { get; set; }
-        /// <summary>
-        /// a list of all the ingredients of the menue item
-        /// </summary>
-        //public List<string> Ingredients
-        //{
-        //    get
-        //    {
-        //        List<string> ingredients = new List<string>() { "Steakburger Pattie", "Steakburger Pattie", "Steakburger Pattie" };
-        //        if (bun) ingredients.Add("Whole Wheat Bun");
-        //        if (pickle) ingredients.Add("Pickle");
-        //        if (ketchup) ingredients.Add("Ketchup");
-        //        if (mustard) ingredients.Add("Mustard");
-        //        if (mayo) ingredients.Add("Mayo");
-        //        if (onion) ingredients.Add("Onion");
-        //        if (lettuce) ingredients.Add("Lettuce");
-        //        if (tomato) ingredients.Add("Tomato");
-
-
-        //        return ingredients;
-        //    }
-        //}
+       
 
         /// <summary>
         /// sets the price and Calories of the menue item
