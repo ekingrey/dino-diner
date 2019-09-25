@@ -1,20 +1,28 @@
-﻿using System;
+﻿/* Sodasaurous.cs
+ * Ethan Kingrey
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
 
+
 namespace DinoDiner.Menu.Drinks
 {
-    public class Sodasaurus
+    public class Sodasaurus : Drink
     {
+        /// <summary>
+        /// holds the flavor of the drink
+        /// </summary>
         private SodasaurusFlavor flavor;
-       public SodasaurusFlavor Flavor {
+        public SodasaurusFlavor Flavor {
             get { return flavor; }
             set { flavor = value; }
         }
 
-        public double Price { get; set; } = 1.5;
-
+        /// <summary>
+        /// holds the size of the drink
+        /// </summary>
         private Size size;
         public Size Size {
             get { return size; }
@@ -24,17 +32,29 @@ namespace DinoDiner.Menu.Drinks
                 {
                     case (Size.Small):
                         Price = 1.50;
+                        Calories = 112;
                         break;
                     case (Size.Medium):
                         Price = 2.00;
+                        Calories = 156;
                         break;
                     case (Size.Large):
                         Price = 2.50;
+                        Calories = 208;
                         break;
                 }
-                
+
             }
         }
-        public bool Ice { get; set; } = true;
+        
+
+        public Sodasaurus(){
+            Price = 1.5;
+            Calories = 112;
+            ingredients.Add("Water");
+            ingredients.Add("Natural Flavors");
+            ingredients.Add("Cane Sugar");
+        }
+
     }
 }
