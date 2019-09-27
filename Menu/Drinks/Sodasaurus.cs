@@ -24,7 +24,7 @@ namespace DinoDiner.Menu.Drinks
         /// holds the size of the drink
         /// </summary>
         private Size size;
-        public Size Size {
+        public override Size Size {
             get { return size; }
             set {
                 size = value;
