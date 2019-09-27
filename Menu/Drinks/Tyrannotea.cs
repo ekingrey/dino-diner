@@ -94,6 +94,9 @@ namespace DinoDiner.Menu.Drinks
             }
         }
 
+        /// <summary>
+        /// adds a lemon to the tea
+        /// </summary>
         public void AddLemon()
         {
             Lemon = true;
