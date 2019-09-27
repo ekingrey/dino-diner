@@ -19,9 +19,18 @@ namespace DinoDiner.Menu.Drinks
             get { return sweet; }
             set
             {
-                sweet = true;
+                if (value)
+                {
+                    sweet = true;
+                    ingredients.Add("Cane Sugar");
+                }
+                else
+                {
+                    sweet = false;
+                    ingredients.Remove("Cane Sugar");
+                }
+
                 
-                ingredients.Add("Cane Sugar");
             }
         }
 

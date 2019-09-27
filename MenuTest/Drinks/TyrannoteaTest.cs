@@ -123,6 +123,21 @@ namespace MenuTest.Drinks
             Assert.Equal<int>(4, ingredients.Count);
         }
 
+        //list has correct ingredients
+        [Fact]
+        public void ShouldListIngredientsTrueFalseSweet()
+        {
+            Tyrannotea soda = new Tyrannotea();
+            soda.Sweet = true;
+            soda.Sweet = false;
+            List<string> ingredients = soda.Ingredients;
+
+            Assert.Contains<string>("Water", ingredients);
+            Assert.Contains<string>("Tea", ingredients);
+            
+            Assert.Equal<int>(2, ingredients.Count);
+        }
+
 
         [Fact]
         public void ShouldHaveCorrectDefaultCalories()
