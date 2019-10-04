@@ -56,5 +56,10 @@ namespace DinoDiner.Menu
             ingredients.Add("Cane Sugar");
         }
 
+        public override string ToString()
+        {
+            return "Soda Saurus";
+        }
+
     }
 }

@@ -9,7 +9,7 @@ using System.Text;
 namespace DinoDiner.Menu
 {
 
-    public abstract class Entrees
+    public abstract class Entrees : IMenuItem
     {
 
         protected List<string> ingredients = new List<string>();
