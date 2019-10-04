@@ -44,5 +44,10 @@ namespace DinoDiner.Menu
         {
             ingredients.Remove("Onion");
         }
+
+        public override string ToString()
+        {
+            return "Brontowurst";
+        }
     }
 }

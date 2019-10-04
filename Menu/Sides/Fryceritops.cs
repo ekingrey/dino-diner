@@ -52,5 +52,10 @@ namespace DinoDiner.Menu
             ingredients.Add("Vegetable Oil");
         }
 
+        public override string ToString()
+        {
+            return "Frceritops";
+        }
+
     }
 }

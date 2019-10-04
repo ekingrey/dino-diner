@@ -51,6 +51,9 @@ namespace DinoDiner.Menu
             ingredients.Add("Cheese Product");
             ingredients.Add("Pork Sausuage");
         }
-
+        public override string ToString()
+        {
+            return "Meteor Mac and Cheese";
+        }
     }
 }

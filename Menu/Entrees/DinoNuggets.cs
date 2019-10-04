@@ -39,7 +39,10 @@ namespace DinoDiner.Menu
             Calories += Calories;
             ingredients.Add("Chicken Nugget");
         }
+        public override string ToString()
+        {
+            return "Dino-Nuggets";
+        }
 
-        
     }
 }

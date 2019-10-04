@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace DinoDiner.Menu
+{ 
     public class PterodactylWings : Entrees
     {
         
@@ -22,6 +23,9 @@ namespace DinoDiner.Menu
 
         }
 
-        
+    public override string ToString()
+    {
+        return "Ptyrodactyl Wings";
+    }
     }
 }

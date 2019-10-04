@@ -51,5 +51,10 @@ namespace DinoDiner.Menu
             
             ingredients.Remove("Parmesan Cheese");
         }
+
+        public override string ToString()
+        {
+            return "Veloci Wrap";
+        }
     }
 }

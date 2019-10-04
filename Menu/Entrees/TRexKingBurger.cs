@@ -102,5 +102,10 @@ namespace DinoDiner.Menu
             ingredients.Remove("Onion");
             
         }
+
+        public override string ToString()
+        {
+            return "T-Rex King Burger";
+        }
     }
 }
