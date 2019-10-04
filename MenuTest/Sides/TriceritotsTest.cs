@@ -24,11 +24,9 @@ namespace MenuTest.Sides
         {
             Triceritots tt = new Triceritots();
             Assert.Contains<string>("Potato", tt.Ingredients);
-<<<<<<< HEAD
-            Assert.Contains<string>("Breading", tt.Ingredients);
-=======
+
             Assert.Contains<string>("Salt", tt.Ingredients);
->>>>>>> 4493590877a0dab5e32321c9274607699a301c11
+
             Assert.Contains<string>("Vegetable Oil", tt.Ingredients);
             Assert.Equal<int>(3, tt.Ingredients.Count);
         }

@@ -7,7 +7,7 @@ using System.Text;
 using DinoDiner.Menu;
 
 
-namespace DinoDiner.Menu.Drinks
+namespace DinoDiner.Menu
 {
     public class Tyrannotea : Drink
     {
