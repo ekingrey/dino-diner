@@ -67,7 +67,19 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return "Water";
+            switch (size)
+            {
+                case (Size.Small):
+                    return "Small Water";
+
+                case (Size.Medium):
+                    return "Medium Water";
+
+                case (Size.Large):
+                    return "Large Water";
+
+            }
+            return "";
         }
 
     }

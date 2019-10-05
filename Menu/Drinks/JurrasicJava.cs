@@ -74,7 +74,25 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return "Jurrasic Java";
+            switch (size)
+            {
+                case (Size.Small):
+                    if(Decaf)
+                    return "Small Decaf Jurrasic Java";
+                    else return "Small Jurrasic Java";
+
+                case (Size.Medium):
+                    if (Decaf)
+                        return "Medium Decaf Jurrasic Java";
+                    else return "Medium Jurrasic Java";
+
+                case (Size.Large):
+                    if (Decaf)
+                        return "Large Decaf Jurrasic Java";
+                    else return "Large Jurrasic Java";
+
+            }
+            return "";
         }
 
     }

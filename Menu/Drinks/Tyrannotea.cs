@@ -120,7 +120,25 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return "Tyranno Tea";
+            switch (size)
+            {
+                case (Size.Small):
+                    if (Sweet)
+                        return "Small Sweet Tyranno Tea";
+                    else return "Small Tyranno Tea";
+
+                case (Size.Medium):
+                    if (Sweet)
+                        return "Medium Sweet Tyranno Tea";
+                    else return "Medium Tyranno Tea";
+
+                case (Size.Large):
+                    if (Sweet)
+                        return "Large Sweet Tyranno Tea";
+                    else return "Large Tyranno Tea";
+
+            }
+            return "";
         }
     }
 }
