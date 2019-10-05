@@ -54,7 +54,19 @@ namespace DinoDiner.Menu
 
         public override string ToString()
         {
-            return "Frceritops";
+            switch (size)
+            {
+                case (Size.Small):
+                    return "Small Fryceritops";
+
+                case (Size.Medium):
+                    return "Medium Fryceritops";
+
+                case (Size.Large):
+                    return "Large Fryceritops";
+
+            }
+            return "";
         }
 
     }

@@ -54,7 +54,19 @@ namespace DinoDiner.Menu
         }
         public override string ToString()
         {
-            return "Mezzorella Sticks";
+            switch (size)
+            {
+                case (Size.Small):
+                    return "Small Mezzorella Sticks";
+
+                case (Size.Medium):
+                    return "Medium Mezzorella Sticks";
+
+                case (Size.Large):
+                    return "Large Mezzorella Sticks";
+
+            }
+            return "";
         }
     }
 }

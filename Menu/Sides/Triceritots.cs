@@ -53,7 +53,19 @@ namespace DinoDiner.Menu
         }
         public override string ToString()
         {
-            return "Triceritots";
+            switch (size)
+            {
+                case (Size.Small):
+                    return "Small Triceritots";
+
+                case (Size.Medium):
+                    return "Medium Triceritots";
+
+                case (Size.Large):
+                    return "Large Triceritots";
+
+            }
+            return "";
         }
 
     }

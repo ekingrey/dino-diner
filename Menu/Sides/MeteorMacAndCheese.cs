@@ -53,7 +53,19 @@ namespace DinoDiner.Menu
         }
         public override string ToString()
         {
-            return "Meteor Mac and Cheese";
+            switch (size)
+            {
+                case (Size.Small):
+                    return "Small Meteor Mac and Cheese";
+
+                case (Size.Medium):
+                    return "Medium Meteor Mac and Cheese";
+
+                case (Size.Large):
+                    return "Large Meteor Mac and Cheese";
+
+            }
+            return "";
         }
     }
 }
