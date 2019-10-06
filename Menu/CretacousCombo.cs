@@ -85,5 +85,10 @@ namespace Menu
             Side = new Fryceritops();
             Drink = new Water();
         }
+
+        public override string ToString()
+        {
+            return (Entree.ToString() + " Combo");
+        }
     }
 }
