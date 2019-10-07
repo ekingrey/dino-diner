@@ -49,7 +49,7 @@ namespace DinoDiner.Menu
             Calories = 420;
             ingredients.Add("Macaroni Noodles");
             ingredients.Add("Cheese Product");
-            ingredients.Add("Pork Sausuage");
+            ingredients.Add("Pork Sausage");
         }
         public override string ToString()
         {

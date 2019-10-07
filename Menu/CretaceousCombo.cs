@@ -7,24 +7,27 @@ using DinoDiner.Menu;
 
 namespace Menu
 {
-    public class CretacousCombo
+    public class CretaceousCombo
     {
 
         public Entrees Entree { get; set; }
 
         private Side side;
-        public Side Side {
+        public Side Side
+        {
             get { return side; }
-            set {
+            set
+            {
                 side = value;
                 side.Size = size;
             }
         }
 
         private Drink drink;
-        public Drink Drink {
+        public Drink Drink
+        {
             get { return drink; }
-            
+
             set
             {
                 drink = value;
@@ -79,7 +82,7 @@ namespace Menu
             }
         }
 
-        public CretacousCombo(Entrees entree)
+        public CretaceousCombo(Entrees entree)
         {
             Entree = entree;
             Side = new Fryceritops();

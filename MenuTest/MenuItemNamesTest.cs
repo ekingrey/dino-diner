@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 using DinoDiner.Menu;
+using Menu;
 
 namespace MenuTest
 {
@@ -123,7 +124,7 @@ namespace MenuTest
         [InlineData(Size.Large, true)]
         public void JurrasicJavaToStringShouldGiveNameForSizeAndDecaf(Size size, bool decaf)
         {
-            JurassicJava java = new JurassicJava();
+            JurrasicJava java = new JurrasicJava();
             java.Size = size;
             java.Decaf = decaf;
             if (decaf) Assert.Equal($"{size} Decaf Jurassic Java", java.ToString());
@@ -202,8 +203,9 @@ namespace MenuTest
         [InlineData(typeof(VelociWrap), "Veloci-Wrap Combo")]
         public void ToStringShouldGiveName(Type type, string name)
         {
-            Entree entree = (Entree)Activator.CreateInstance(type);
+            Entrees entree = (Entrees)Activator.CreateInstance(type);
             CretaceousCombo combo = new CretaceousCombo(entree);
+            
             Assert.Equal(name, combo.ToString());
         }
 
