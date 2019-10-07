@@ -124,18 +124,18 @@ namespace DinoDiner.Menu
             {
                 case (Size.Small):
                     if (Sweet)
-                        return "Small Sweet Tyranno Tea";
-                    else return "Small Tyranno Tea";
+                        return "Small Sweet Tyrannotea";
+                    else return "Small Tyrannotea";
 
                 case (Size.Medium):
                     if (Sweet)
-                        return "Medium Sweet Tyranno Tea";
-                    else return "Medium Tyranno Tea";
+                        return "Medium Sweet Tyrannotea";
+                    else return "Medium Tyrannotea";
 
                 case (Size.Large):
                     if (Sweet)
-                        return "Large Sweet Tyranno Tea";
-                    else return "Large Tyranno Tea";
+                        return "Large Sweet Tyrannotea";
+                    else return "Large Tyrannotea";
 
             }
             return "";

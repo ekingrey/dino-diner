@@ -12,7 +12,7 @@ namespace DinoDiner.Menu
     public abstract class Entrees : IMenuItem
     {
 
-        protected List<string> ingredients = new List<string>();
+        protected readonly List<string> ingredients = new List<string>();
         /// <summary> 
         /// Gets and sets the price
         /// </summary>

@@ -61,13 +61,13 @@ namespace DinoDiner.Menu
             switch (size)
             {
                 case (Size.Small):
-                    return "Small "+ Flavor +" Soda Saurus";
+                    return "Small "+ Flavor + " Sodasaurus";
 
                 case (Size.Medium):
-                    return "Medium " + Flavor + " Soda Saurus";
+                    return "Medium " + Flavor + " Sodasaurus";
 
                 case (Size.Large):
-                    return "Large " + Flavor + " Soda Saurus";
+                    return "Large " + Flavor + " Sodasaurus";
 
             }
             return "";

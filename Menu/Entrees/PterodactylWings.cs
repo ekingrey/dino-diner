@@ -25,7 +25,7 @@ namespace DinoDiner.Menu
 
     public override string ToString()
     {
-        return "Ptyrodactyl Wings";
+        return "Pterodactyl Wings";
     }
     }
 }

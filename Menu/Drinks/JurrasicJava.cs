@@ -78,18 +78,18 @@ namespace DinoDiner.Menu
             {
                 case (Size.Small):
                     if(Decaf)
-                    return "Small Decaf Jurrasic Java";
-                    else return "Small Jurrasic Java";
+                    return "Small Decaf Jurassic Java";
+                    else return "Small Jurassic Java";
 
                 case (Size.Medium):
                     if (Decaf)
-                        return "Medium Decaf Jurrasic Java";
-                    else return "Medium Jurrasic Java";
+                        return "Medium Decaf Jurassic Java";
+                    else return "Medium Jurassic Java";
 
                 case (Size.Large):
                     if (Decaf)
-                        return "Large Decaf Jurrasic Java";
-                    else return "Large Jurrasic Java";
+                        return "Large Decaf Jurassic Java";
+                    else return "Large Jurassic Java";
 
             }
             return "";
