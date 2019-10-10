@@ -28,9 +28,9 @@
         <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="2"> Drinks</TextBlock>
         <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectSide" Grid.Row="2" Grid.Column="0">Fryceritops</Button>
 
-        <Button FontSize="20" FontWeight="Bold"  Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="1">Small</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">Medium</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="1">Large</Button>
+        <RadioButton IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="4" Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
+        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
+        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
 
         <Button FontSize="15" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Sodasaurus</Button>
     </Grid>
