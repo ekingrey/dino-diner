@@ -8,20 +8,40 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DrinkSelection">
 
-    <Grid>
+   
+
+
+    <Grid Margin="10">
+
         <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
+            <ColumnDefinition />
             <ColumnDefinition/>
+
         </Grid.ColumnDefinitions>
-        <Button Click="SelectCombo" Grid.Row="0" Grid.Column="0">Sodasaurus</Button>
-        <Button  Click="SelectEntree" Grid.Row="0" Grid.Column="1">Tyrannotea</Button>
-        <Button  Click="SelectSide" Grid.Row="1" Grid.Column="0">Jurrasic Java</Button>
-        <Button  Click="SelectDrink" Grid.Row="1" Grid.Column="1">Water</Button>
+        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="0"> Drink</TextBlock>
+        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
+        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="2"> Special</TextBlock>
+        <Button FontSize="20" FontWeight="Bold" Margin="8" Click="SelectDrink" Grid.Row="1" Grid.Column="0">Sodasaurus</Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="8" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Tyrannotea</Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="8" Click="SelectDrink" Grid.Row="3" Grid.Column="0">Jurrasic Java</Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="8" Click="SelectDrink" Grid.Row="4" Grid.Column="0">Water</Button>
 
+        <Button FontSize="20" FontWeight="Bold"  Margin="8" Click="SelectDrink" Grid.Row="1" Grid.Column="1">Small</Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="8" Click="SelectDrink" Grid.Row="2" Grid.Column="1">Medium</Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="8" Click="SelectDrink" Grid.Row="3" Grid.Column="1">Large</Button>
 
+        <Button FontSize="15" FontWeight="Bold" Margin="8" Click="SelectDrink" Grid.Row="1" Grid.Column="2">
+            <TextBlock>Sweet/<LineBreak/>Decaf/<LineBreak/>Flavor</TextBlock>
+        </Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="8" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Add Lemon</Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="8" Click="SelectDrink" Grid.Row="3" Grid.Column="2">Hold Ice</Button>
     </Grid>
 </Page>
