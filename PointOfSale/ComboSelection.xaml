@@ -10,22 +10,44 @@
 
 
 
-    <WrapPanel>
-        <WrapPanel.Resources>
-            <Style TargetType="Button">
-                <Setter Property="MinWidth" Value="140"/>
-                <Setter Property="MinHeight" Value="140"/>
-            </Style>
-            
-        </WrapPanel.Resources>
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition/>
 
-        <Button>Brontowurst Combo</Button>
-        <Button>Dino-Nugget Combo</Button>
-        <Button>Prehistoric PB&amp;J Combo</Button>
-        <Button>Pterodactyl Wings Combo</Button>
-        <Button>Steakosaurus Burger Combo</Button>
-        <Button>T-Rex Kingburger Combo</Button>
-        <Button>Veloci-Wrap Combo</Button>
-        
-    </WrapPanel>
+        </Grid.ColumnDefinitions>
+        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Combos</TextBlock>
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">
+            <TextBlock TextAlignment="Center">Brontowurst<LineBreak/>Combo</TextBlock>
+        </Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">
+            <TextBlock TextAlignment="Center">Dino-Nuggets<LineBreak/>Combo</TextBlock>
+        </Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">
+            <TextBlock TextAlignment="Center">Prehistoric<LineBreak/>PB&amp;J<LineBreak/>Combo</TextBlock>
+        </Button>
+
+
+
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="1">
+            <TextBlock TextAlignment="Center">Pterodactyl<LineBreak/>Wings<LineBreak/>Combo</TextBlock>
+        </Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">
+            <TextBlock TextAlignment="Center">Steakosaurus<LineBreak/>Burger<LineBreak/>Combo</TextBlock>
+        </Button>
+
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">
+            <TextBlock TextAlignment="Center">T-Rex<LineBreak/>KingBurger<LineBreak/>Combo</TextBlock>
+        </Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">
+            <TextBlock TextAlignment="Center">Veloci-Wrap<LineBreak/>Combo</TextBlock>
+        </Button>
+    </Grid>
 </Page>
