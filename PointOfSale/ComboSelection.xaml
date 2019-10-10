@@ -24,29 +24,29 @@
 
         </Grid.ColumnDefinitions>
         <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Combos</TextBlock>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="CustomCombo" Grid.Row="1" Grid.Column="0">
             <TextBlock TextAlignment="Center">Brontowurst<LineBreak/>Combo</TextBlock>
         </Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="CustomCombo" Grid.Row="2" Grid.Column="0">
             <TextBlock TextAlignment="Center">Dino-Nuggets<LineBreak/>Combo</TextBlock>
         </Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="CustomCombo" Grid.Row="3" Grid.Column="0">
             <TextBlock TextAlignment="Center">Prehistoric<LineBreak/>PB&amp;J<LineBreak/>Combo</TextBlock>
         </Button>
 
 
 
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="1">
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="CustomCombo" Grid.Row="1" Grid.Column="1">
             <TextBlock TextAlignment="Center">Pterodactyl<LineBreak/>Wings<LineBreak/>Combo</TextBlock>
         </Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="CustomCombo" Grid.Row="2" Grid.Column="1">
             <TextBlock TextAlignment="Center">Steakosaurus<LineBreak/>Burger<LineBreak/>Combo</TextBlock>
         </Button>
 
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="CustomCombo" Grid.Row="1" Grid.Column="2">
             <TextBlock TextAlignment="Center">T-Rex<LineBreak/>KingBurger<LineBreak/>Combo</TextBlock>
         </Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="CustomCombo" Grid.Row="2" Grid.Column="2">
             <TextBlock TextAlignment="Center">Veloci-Wrap<LineBreak/>Combo</TextBlock>
         </Button>
     </Grid>

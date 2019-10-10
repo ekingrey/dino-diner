@@ -8,7 +8,30 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CustomizeCombo">
 
-    <Grid>
-        
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition />
+            <RowDefinition/>
+            <RowDefinition/>
+           
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="0"> Sides</TextBlock>
+        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
+        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="2"> Drinks</TextBlock>
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectSide" Grid.Row="2" Grid.Column="0">Fryceritops</Button>
+
+        <Button FontSize="20" FontWeight="Bold"  Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="1">Small</Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">Medium</Button>
+        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="1">Large</Button>
+
+        <Button FontSize="15" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Sodasaurus</Button>
     </Grid>
 </Page>

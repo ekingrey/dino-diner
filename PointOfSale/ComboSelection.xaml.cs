@@ -25,10 +25,10 @@ namespace PointOfSale
             InitializeComponent();
         }
 
-        void SelectDrink(object sender, RoutedEventArgs args)
+        void CustomCombo(object sender, RoutedEventArgs args)
         {
 
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.Navigate(new CustomizeCombo());
 
         }
     }
