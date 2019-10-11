@@ -10,6 +10,13 @@
 
     <Grid Margin="10">
 
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF396A2B" Offset="1"/>
+                <GradientStop Color="#FF3FCF15" Offset="0.39"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition/>
@@ -23,16 +30,50 @@
            
 
         </Grid.ColumnDefinitions>
-        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="0"> Side</TextBlock>
-        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">Fryceritops</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Meteor Mac &amp; Cheese</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">Mezzorella Sticks</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="4" Grid.Column="0">Triceritots</Button>
 
-        <RadioButton IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="4"  Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
-        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
-        <RadioButton HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
+        <Canvas  Margin="4" Grid.Column="0" Grid.Row="1" Background="LightGray"></Canvas>
+        <Canvas  Margin="4" Grid.Column="0" Grid.Row="2" Background="LightGray"></Canvas>
+        <Canvas  Margin="4" Grid.Column="0" Grid.Row="3" Background="LightGray"></Canvas>
+        <Canvas  Margin="4" Grid.Column="0" Grid.Row="4" Background="LightGray"></Canvas>
+
+        <TextBlock FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="0"> Side</TextBlock>
+        <TextBlock FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">
+            Fryceritops
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-08.png" />
+
+            </Button.Background>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">
+            Meteor Mac &amp; Cheese
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-09.png" />
+
+            </Button.Background>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">
+            Mezzorella Sticks
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-10.png" />
+
+            </Button.Background>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="4" Grid.Column="0">
+            Triceritots
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-11.png" />
+
+            </Button.Background>
+        </Button>
+
+        <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
+        <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
+        <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
 
     </Grid>
 </Page>

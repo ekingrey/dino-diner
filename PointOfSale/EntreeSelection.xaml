@@ -8,7 +8,15 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="EntreeSelection">
 
-    <Grid Margin="10">
+
+    <Grid Margin="10" >
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF396A2B" Offset="1"/>
+                <GradientStop Color="#FF3FCF15" Offset="0.39"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
 
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
@@ -22,26 +30,73 @@
             <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
-        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Entree</TextBlock>
 
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">Brontowurst</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Dino-Nuggets</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">
+        <TextBlock FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Entree</TextBlock>
+
+        <Canvas  Margin="4" Grid.Column="0" Grid.Row="1" Background="LightGray"></Canvas>
+        <Canvas  Margin="4" Grid.Column="0" Grid.Row="2" Background="LightGray"></Canvas>
+        <Canvas  Margin="4" Grid.Column="0" Grid.Row="3" Background="LightGray"></Canvas>
+        <Canvas  Margin="4" Grid.Column="1" Grid.Row="1" Background="LightGray"></Canvas>
+        <Canvas  Margin="4" Grid.Column="1" Grid.Row="2" Background="LightGray"></Canvas>
+        <Canvas  Margin="4" Grid.Column="2" Grid.Row="1" Background="LightGray"></Canvas>
+        <Canvas  Margin="4" Grid.Column="2" Grid.Row="2" Background="LightGray"></Canvas>
+
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">Brontowurst
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-01.png" />
+
+            </Button.Background>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Dino-Nuggets
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-02.png" />
+
+            </Button.Background>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-03.png" />
+
+            </Button.Background>
             <TextBlock TextAlignment="Center">Prehistoric<LineBreak/>PB&amp;J</TextBlock>
         </Button>
 
 
 
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="1">
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="1">
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-04.png" />
+
+            </Button.Background>
             <TextBlock TextAlignment="Center">Pterodactyl<LineBreak/>Wings</TextBlock>
         </Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-05.png" />
+
+            </Button.Background>
             <TextBlock TextAlignment="Center">Steakosaurus<LineBreak/>Burger</TextBlock>
         </Button>
 
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-06.png" />
+
+            </Button.Background>
             <TextBlock TextAlignment="Center">T-Rex<LineBreak/>KingBurger</TextBlock>
         </Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Veloci-Wrap</Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Veloci-Wrap
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-07.png" />
+
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

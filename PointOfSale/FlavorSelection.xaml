@@ -10,6 +10,13 @@
 
     <Grid Margin="10">
 
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF396A2B" Offset="1"/>
+                <GradientStop Color="#FF3FCF15" Offset="0.39"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition/>
@@ -22,7 +29,7 @@
             <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
-        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Flacor</TextBlock>
+        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Flavor</TextBlock>
 
         <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">Cherry</Button>
         <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Lime</Button>

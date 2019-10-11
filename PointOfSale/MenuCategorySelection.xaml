@@ -8,6 +8,14 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MenuCategorySelection">
     <Grid>
+
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FF396A2B" Offset="1"/>
+                <GradientStop Color="#FF3FCF15" Offset="0.39"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition/>
