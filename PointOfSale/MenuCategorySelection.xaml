@@ -24,10 +24,49 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Click="SelectCombo" Grid.Row="0" Grid.Column="0">Combos</Button>
-        <Button  Click="SelectEntree" Grid.Row="0" Grid.Column="1">Entrees</Button>
-        <Button  Click="SelectSide" Grid.Row="1" Grid.Column="0">Sides</Button>
-        <Button  Click="SelectDrink" Grid.Row="1" Grid.Column="1">Drinks</Button>
+
+        <Canvas  Margin="10" Grid.Column="0" Grid.Row="1" Background="LightGray"></Canvas>
+        <Canvas  Margin="10" Grid.Column="0" Grid.Row="2" Background="LightGray"></Canvas>
+        <Canvas  Margin="10" Grid.Column="1" Grid.Row="2" Background="LightGray"></Canvas>
+        <Canvas  Margin="10" Grid.Column="1" Grid.Row="1" Background="LightGray"></Canvas>
+
+        
+
+
+        <Button FontSize="25" FontWeight="Bold" Margin="10"  Click="SelectCombo" Grid.Row="0" Grid.Column="0">Combos
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF745912" Offset="1"/>
+                    <GradientStop Color="#FFFF910E" Offset="0.043"/>
+                </LinearGradientBrush>
+            </Button.Background>
+
+
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="10"  Click="SelectEntree" Grid.Row="0" Grid.Column="1">Entrees
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF5B0E0A" Offset="1"/>
+                    <GradientStop Color="#FFFF240E" Offset="0.213"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="10"  Click="SelectSide" Grid.Row="1" Grid.Column="0">Sides
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF77932A" Offset="1"/>
+                    <GradientStop Color="#FFF4FF0E"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="10"  Click="SelectDrink" Grid.Row="1" Grid.Column="1">Drinks
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0A1D5B" Offset="1"/>
+                    <GradientStop Color="#FF0E45FF" Offset="0.043"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
 
 
     </Grid>

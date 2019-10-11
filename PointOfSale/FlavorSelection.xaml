@@ -29,18 +29,18 @@
             <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
-        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Flavor</TextBlock>
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Flavor</TextBlock>
 
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">Cherry</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Lime</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">Vanilla</Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">Cherry</Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Lime</Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">Vanilla</Button>
 
 
 
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="1">Chocolate</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">Orange</Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="1">Chocolate</Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">Orange</Button>
 
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">Cola</Button>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Root Beer</Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">Cola</Button>
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Root Beer</Button>
     </Grid>
 </Page>

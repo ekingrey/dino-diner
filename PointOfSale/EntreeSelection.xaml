@@ -31,7 +31,7 @@
 
         </Grid.ColumnDefinitions>
 
-        <TextBlock FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Entree</TextBlock>
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Entree</TextBlock>
 
         <Canvas  Margin="4" Grid.Column="0" Grid.Row="1" Background="LightGray"></Canvas>
         <Canvas  Margin="4" Grid.Column="0" Grid.Row="2" Background="LightGray"></Canvas>

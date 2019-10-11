@@ -22,23 +22,52 @@
             <RowDefinition />
             <RowDefinition/>
             <RowDefinition/>
-           
+
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition/>
 
         </Grid.ColumnDefinitions>
-        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="0"> Sides</TextBlock>
-        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
-        <TextBlock FontWeight="Bold" FontSize="20" TextAlignment="Center" Grid.Column="2"> Drinks</TextBlock>
-        <Button FontSize="20" FontWeight="Bold" Margin="4" Click="SelectSide" Grid.Row="2" Grid.Column="0">Fryceritops</Button>
+        <Canvas Grid.RowSpan="3" Margin="4" Grid.Column="0" Grid.Row="1">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFFBFB00"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+        <Canvas Grid.RowSpan="3" Margin="4" Grid.Column="3" Grid.Row="1">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0.54"/>
+                    <GradientStop Color="#FF0E45FF"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+        </Canvas>
+
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="0"> Sides</TextBlock>
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="2"> Drinks</TextBlock>
+        <Button Grid.RowSpan="3"  FontSize="25" FontWeight="Bold" Margin="4" Click="SelectSide" Grid.Row="1" Grid.Column="0">Fryceritops
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-08.png" />
+
+            </Button.Background>
+        </Button>
 
         <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
         <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
         <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
 
-        <Button FontSize="15" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Sodasaurus</Button>
+        <Button Grid.RowSpan="3" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">Sodasaurus
+            <Button.Background>
+
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-14.png" />
+
+            </Button.Background>
+        </Button>
     </Grid>
 </Page>

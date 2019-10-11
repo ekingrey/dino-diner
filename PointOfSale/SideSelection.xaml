@@ -36,8 +36,8 @@
         <Canvas  Margin="4" Grid.Column="0" Grid.Row="3" Background="LightGray"></Canvas>
         <Canvas  Margin="4" Grid.Column="0" Grid.Row="4" Background="LightGray"></Canvas>
 
-        <TextBlock FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="0"> Side</TextBlock>
-        <TextBlock FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="0"> Side</TextBlock>
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">
             Fryceritops
             <Button.Background>

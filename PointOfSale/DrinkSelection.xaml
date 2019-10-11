@@ -38,10 +38,10 @@
         <Canvas  Margin="4" Grid.Column="0" Grid.Row="2" Background="LightGray"></Canvas>
         <Canvas  Margin="4" Grid.Column="0" Grid.Row="3" Background="LightGray"></Canvas>
         <Canvas  Margin="4" Grid.Column="0" Grid.Row="4" Background="LightGray"></Canvas>
-        
-        <TextBlock FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="0"> Drink</TextBlock>
-        <TextBlock FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
-        <TextBlock FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="2"> Special</TextBlock>
+
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="0"> Drink</TextBlock>
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
+        <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="2"> Special</TextBlock>
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectFlavor" Grid.Row="1" Grid.Column="0">Sodasaurus
             <Button.Background>
 
