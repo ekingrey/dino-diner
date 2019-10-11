@@ -44,14 +44,14 @@
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">Brontowurst
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-01.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-01.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Dino-Nuggets
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-02.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-02.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
@@ -77,7 +77,7 @@
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-05.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-05.png" Stretch="UniformToFill" />
 
             </Button.Background>
             <TextBlock TextAlignment="Center">Steakosaurus<LineBreak/>Burger</TextBlock>
@@ -86,7 +86,7 @@
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-06.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-06.png" Stretch="UniformToFill" />
 
             </Button.Background>
             <TextBlock TextAlignment="Center">T-Rex<LineBreak/>KingBurger</TextBlock>
@@ -94,7 +94,7 @@
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Veloci-Wrap
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-07.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-07.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>

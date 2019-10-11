@@ -45,28 +45,28 @@
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectFlavor" Grid.Row="1" Grid.Column="0">Sodasaurus
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-14.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-14.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Tyrannotea
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-12.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-12.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">Jurrasic Java
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-13.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-13.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
         <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="4" Grid.Column="0">Water
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-15.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-15.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>

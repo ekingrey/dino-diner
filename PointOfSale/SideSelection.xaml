@@ -42,7 +42,7 @@
             Fryceritops
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-08.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-08.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
@@ -50,7 +50,7 @@
             Meteor Mac &amp; Cheese
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-09.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-09.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
@@ -58,7 +58,7 @@
             Mezzorella Sticks
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-10.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-10.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>

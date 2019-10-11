@@ -53,7 +53,7 @@
         <Button Grid.RowSpan="3"  FontSize="25" FontWeight="Bold" Margin="4" Click="SelectSide" Grid.Row="1" Grid.Column="0">Fryceritops
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-08.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-08.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
@@ -65,7 +65,7 @@
         <Button Grid.RowSpan="3" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">Sodasaurus
             <Button.Background>
 
-                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-14.png" />
+                <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-14.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>

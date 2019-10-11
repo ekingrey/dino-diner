@@ -36,8 +36,8 @@
         <Button FontSize="25" FontWeight="Bold" Margin="10"  Click="SelectCombo" Grid.Row="0" Grid.Column="0">Combos
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF745912" Offset="1"/>
-                    <GradientStop Color="#FFFF910E" Offset="0.043"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFFBFBFB" Offset="0.183"/>
                 </LinearGradientBrush>
             </Button.Background>
 
@@ -46,24 +46,24 @@
         <Button FontSize="25" FontWeight="Bold" Margin="10"  Click="SelectEntree" Grid.Row="0" Grid.Column="1">Entrees
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF5B0E0A" Offset="1"/>
-                    <GradientStop Color="#FFFF240E" Offset="0.213"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFFBFBFB" Offset="0.183"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
         <Button FontSize="25" FontWeight="Bold" Margin="10"  Click="SelectSide" Grid.Row="1" Grid.Column="0">Sides
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF77932A" Offset="1"/>
-                    <GradientStop Color="#FFF4FF0E"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFFBFBFB" Offset="0.183"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
         <Button FontSize="25" FontWeight="Bold" Margin="10"  Click="SelectDrink" Grid.Row="1" Grid.Column="1">Drinks
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="#FF0A1D5B" Offset="1"/>
-                    <GradientStop Color="#FF0E45FF" Offset="0.043"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                    <GradientStop Color="#FFFBFBFB" Offset="0.183"/>
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
