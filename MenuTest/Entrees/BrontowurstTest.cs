@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Xunit;
 using DinoDiner.Menu;
 
-namespace MenuTest.Entrees
+namespace MenuTest.Entree
 {
     public class BrontowurstUnitTest
     {
@@ -104,51 +104,67 @@ namespace MenuTest.Entrees
             bw.HoldOnion();
             Assert.Collection<string>(bw.Special,
                 item => {
-                    Assert.Equal("Hold Onions", item);
+                    Assert.Equal("Hold Onion", item);
                 });
         }
 
-        //[Fact]
-        //public void HoldPeanutButterJellySouldAddToSpecial()
-        //{
-        //    Brontowurst bw = new Brontowurst();
-        //    bw.HoldJelly();
-        //    pbj.HoldPeanutButter();
+        [Fact]
+        public void HoldBunPeppersOnionsSouldAddToSpecial()
+        {
+            Brontowurst bw = new Brontowurst();
+            bw.HoldBun();
+            bw.HoldPeppers();
+            bw.HoldOnion();
 
-        //    Assert.Collection<string>(pbj.Special,
-        //        item =>
-        //        {
-        //            Assert.Equal("Hold Peanut Butter", item);
-        //        },
-        //    item =>
-        //    {
-        //        Assert.Equal("Hold Jelly", item);
-        //    });
+            Assert.Collection<string>(bw.Special,
+                item =>
+                {
+                    Assert.Equal("Hold Whole Wheat Bun", item);
+                },
+                item =>
+                {
+                    Assert.Equal("Hold Peppers", item);
+                },
+                item =>
+                {
+                    Assert.Equal("Hold Onion", item);
+                });
 
-        //}
+        }
 
 
-        //[Fact]
-        //public void HoldingPeanutButterShouldNotifySpecialChange()
-        //{
-        //    Brontowurst bw = new Brontowurst();
+        [Fact]
+        public void HoldingBunShouldNotifySpecialChange()
+        {
+            Brontowurst bw = new Brontowurst();
 
-        //    Assert.PropertyChanged(pbj, "Special", () =>
-        //    {
-        //        pbj.HoldPeanutButter();
-        //    });
-        //}
+            Assert.PropertyChanged(bw, "Special", () =>
+            {
+                bw.HoldBun();
+            });
+        }
 
-        //[Fact]
-        //public void HoldingJellyShouldNotifySpecialChange()
-        //{
-        //    Brontowurst bw = new Brontowurst();
+        [Fact]
+        public void HoldingPeppersShouldNotifySpecialChange()
+        {
+            Brontowurst bw = new Brontowurst();
 
-        //    Assert.PropertyChanged(pbj, "Special", () =>
-        //    {
-        //        pbj.HoldJelly();
-        //    });
-        //}
+            Assert.PropertyChanged(bw, "Special", () =>
+            {
+                bw.HoldPeppers();
+            });
+        }
+
+        [Fact]
+        public void HoldingOnionsShouldNotifySpecialChange()
+        {
+            Brontowurst bw = new Brontowurst();
+
+            Assert.PropertyChanged(bw, "Special", () =>
+            {
+                bw.HoldOnion();
+            });
+        }
 
 
 

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using Xunit;
 using DinoDiner.Menu;
 
-namespace MenuTest.Entrees
+namespace MenuTest.Entree
 {
     public class TRexKingBurgerUnitTest
     {

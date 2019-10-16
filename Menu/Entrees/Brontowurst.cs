@@ -4,13 +4,21 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.ComponentModel;
 namespace DinoDiner.Menu
 {
-    public class Brontowurst : Entrees, IOrderItem
+    public class Brontowurst : Entrees, IOrderItem, INotifyPropertyChanged
     {
-        
 
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// sets the price and Calories of the menue item
         /// </summary>
@@ -30,6 +38,8 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             ingredients.Remove("Whole Wheat Bun");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes the peppers off
@@ -37,6 +47,8 @@ namespace DinoDiner.Menu
         public void HoldPeppers()
         {
             ingredients.Remove("Peppers");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes the onions off
@@ -44,6 +56,8 @@ namespace DinoDiner.Menu
         public void HoldOnion()
         {
             ingredients.Remove("Onion");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()

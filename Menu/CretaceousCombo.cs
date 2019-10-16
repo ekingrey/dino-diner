@@ -19,9 +19,9 @@ namespace Menu
         private Entrees entree;
         public Entrees Entree { get { return entree; } protected set
             { entree = value;
-                entree.PropertyChanged += (object sender, PropertyChangedEventArgs args){
-                    NotifyOfPropertyChanged(args.PropertyName);
-                };
+                //entree.PropertyChanged += (object sender, PropertyChangedEventArgs args) =>{
+                //    NotifyOfPropertyChanged(args.PropertyName);
+                //};
 
             }
         }
@@ -132,11 +132,11 @@ namespace Menu
             get
             {
                 List<string> special = new List<string>();
-                special.AddRange(Entree.Special);
-                special.Add(Side.description);
-                special.AddRange(Side.Special);
-                special.Add(Drink.description);
-                special.AddRange(Drink.Special);
+                //special.AddRange(Entree.Special);
+                //special.Add(Side.description);
+                //special.AddRange(Side.Special);
+                //special.Add(Drink.description);
+                //special.AddRange(Drink.Special);
                 return special.ToArray();
 
             }
