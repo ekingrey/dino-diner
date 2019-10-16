@@ -7,9 +7,10 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    public class Brontowurst : Entrees
+    public class Brontowurst : Entrees, IOrderItem
     {
         
+
         /// <summary>
         /// sets the price and Calories of the menue item
         /// </summary>
@@ -50,6 +51,31 @@ namespace DinoDiner.Menu
             return "Brontowurst";
         }
 
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
 
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!ingredients.Contains("Whole Wheat Bun"))
+                {
+                    special.Add("Hold Whole Wheat Bun");
+                }
+
+                if (!ingredients.Contains("Peppers"))
+                {
+                    special.Add("Hold Peppers");
+                }
+                if (!ingredients.Contains("Onion"))
+                {
+                    special.Add("Hold Onion");
+                }
+                return special.ToArray();
+            }
+        }
     }
 }

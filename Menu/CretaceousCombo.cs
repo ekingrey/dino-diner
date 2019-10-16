@@ -3,16 +3,30 @@ using System.Collections.Generic;
 using System.Text;
 
 using DinoDiner.Menu;
+using System.ComponentModel;
 
 
 namespace Menu
 {
-    public class CretaceousCombo
+    public class CretaceousCombo: IOrderItem
     {
 
-        public Entrees Entree { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+        private Entrees entree;
+        public Entrees Entree { get { return entree; } protected set
+            { entree = value;
+                entree.PropertyChanged += (object sender, PropertyChangedEventArgs args){
+                    NotifyOfPropertyChanged(args.PropertyName);
+                };
 
-        private Side side;
+            }
+        }
+
+        private Side side ;
         public Side Side
         {
             get { return side; }
@@ -23,7 +37,7 @@ namespace Menu
             }
         }
 
-        private Drink drink;
+        private Drink drink = new Sodasaurus();
         public Drink Drink
         {
             get { return drink; }
@@ -31,6 +45,10 @@ namespace Menu
             set
             {
                 drink = value;
+                NotifyOfPropertyChanged("Ingredients");
+                NotifyOfPropertyChanged("Special");
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Calories");
                 drink.Size = size;
             }
         }
@@ -65,6 +83,10 @@ namespace Menu
                 size = value;
                 Drink.Size = value;
                 Side.Size = value;
+                NotifyOfPropertyChanged("Special");
+                NotifyOfPropertyChanged("Size");
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Calories");
 
 
             }
@@ -82,6 +104,7 @@ namespace Menu
             }
         }
 
+
         public CretaceousCombo(Entrees entree)
         {
             Entree = entree;
@@ -92,6 +115,31 @@ namespace Menu
         public override string ToString()
         {
             return (Entree.ToString() + " Combo");
+        }
+
+
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                special.AddRange(Entree.Special);
+                special.Add(Side.description);
+                special.AddRange(Side.Special);
+                special.Add(Drink.description);
+                special.AddRange(Drink.Special);
+                return special.ToArray();
+
+            }
         }
     }
 }
