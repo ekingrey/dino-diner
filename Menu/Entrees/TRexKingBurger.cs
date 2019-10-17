@@ -4,13 +4,21 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.ComponentModel;
 namespace DinoDiner.Menu
 {
-    public class TRexKingBurger :Entrees 
+    public class TRexKingBurger :Entrees , IOrderItem, INotifyPropertyChanged
     {
-       
 
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// sets the price and Calories of the menue item
         /// </summary>
@@ -38,7 +46,8 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             ingredients.Remove("Whole Wheat Bun");
-            
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes the pickles off the burger
@@ -47,7 +56,8 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Pickle");
-            
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes ketchup off the burger
@@ -56,7 +66,8 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Ketchup");
-            
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes mustard off the burger
@@ -65,7 +76,8 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Mustard");
-            
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes mayo off the burger
@@ -74,7 +86,8 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Mayo");
-            
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes tomatos off the burger
@@ -83,6 +96,8 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Tomato");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes the lettuce off the burger
@@ -91,7 +106,8 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Lettuce");
-            
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes teh onion off the burger
@@ -100,7 +116,8 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Onion");
-            
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()
@@ -108,6 +125,51 @@ namespace DinoDiner.Menu
             return "T-Rex King Burger";
         }
 
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
 
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!ingredients.Contains("Whole Wheat Bun"))
+                {
+                    special.Add("Hold Whole Wheat Bun");
+                }
+
+                if (!ingredients.Contains("Ketchup"))
+                {
+                    special.Add("Hold Ketchup");
+                }
+                if (!ingredients.Contains("Mustard"))
+                {
+                    special.Add("Hold Mustard");
+                }
+                if (!ingredients.Contains("Pickle"))
+                {
+                    special.Add("Hold Pickle");
+                }
+                if (!ingredients.Contains("Mayo"))
+                {
+                    special.Add("Hold Mayo");
+                }
+                if (!ingredients.Contains("Onion"))
+                {
+                    special.Add("Hold Onion");
+                }
+                if (!ingredients.Contains("Tomato"))
+                {
+                    special.Add("Hold Tomato");
+                }
+                if (!ingredients.Contains("Lettuce"))
+                {
+                    special.Add("Hold Lettuce");
+                }
+                return special.ToArray();
+            }
+        }
     }
 }

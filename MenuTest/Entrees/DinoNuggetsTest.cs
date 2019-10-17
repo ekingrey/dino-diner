@@ -74,7 +74,7 @@ namespace MenuTest.Entree
             Assert.Equal(dn.Price, 5.0, 2);
         }
 
-
+        [Fact]
         public void AddingNuggetsShouldIncreaseCalories()
         {
             DinoNuggets dn = new DinoNuggets();
@@ -88,6 +88,32 @@ namespace MenuTest.Entree
 
             Assert.Equal<uint>(dn.Calories, 59 * 9);
 
+        }
+
+        [Fact]
+        public void Description()
+        {
+            DinoNuggets dn = new DinoNuggets();
+            Assert.Equal("Dino-Nuggets", dn.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            DinoNuggets dn = new DinoNuggets();
+            Assert.Empty(dn.Special);
+        }
+
+        [Fact]
+        public void AddNuggetsSouldAddToSpecial()
+        {
+            DinoNuggets dn = new DinoNuggets();
+            dn.AddNugget();
+            Assert.Collection<string>(dn.Special,
+                item =>
+                {
+                    Assert.Equal(" Nuggets Added", item);
+                });
         }
     }
 }

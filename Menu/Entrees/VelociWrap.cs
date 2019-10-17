@@ -5,13 +5,21 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.ComponentModel;
 namespace DinoDiner.Menu
 {
-    public class VelociWrap : Entrees
+    public class VelociWrap : Entrees, IOrderItem, INotifyPropertyChanged
     {
-        
 
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// sets the price and Calories of the menue item
         /// </summary>
@@ -32,7 +40,8 @@ namespace DinoDiner.Menu
         public void HoldDressing()
         {
             ingredients.Remove("Ceasar Dressing");
-           
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes the lettuce off the wrap
@@ -41,7 +50,8 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Romaine Lettuce");
-            
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
         /// <summary>
         /// takes the cheese off the wrap
@@ -50,6 +60,8 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Parmesan Cheese");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
         public override string ToString()
@@ -57,6 +69,32 @@ namespace DinoDiner.Menu
             return "Veloci-Wrap";
         }
 
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
 
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (!ingredients.Contains("Romaine Lettuce"))
+                {
+                    special.Add("Hold Romaine Lettuce");
+                }
+
+                if (!ingredients.Contains("Ceasar Dressing"))
+                {
+                    special.Add("Hold Ceasar Dressing");
+                }
+                if (!ingredients.Contains("Parmesan Cheese"))
+                {
+                    special.Add("Hold Parmesan Cheese");
+                }
+                
+                return special.ToArray();
+            }
+        }
     }
 }

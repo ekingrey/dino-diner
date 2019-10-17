@@ -6,7 +6,7 @@ using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class PrehistoricPBJ : Entrees, INotifyPropertyChanged
+    public class PrehistoricPBJ : Entrees, INotifyPropertyChanged, IOrderItem
     {
         /// <summary>
         /// an event handler for PropertyChanged events
