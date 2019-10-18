@@ -5,12 +5,22 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
-
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class Tyrannotea : Drink
+    public class Tyrannotea : Drink, IOrderItem, INotifyPropertyChanged
     {
+
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         private bool sweet = false;
         /// <summary>
         /// makes the drink sweet or not
@@ -29,8 +39,9 @@ namespace DinoDiner.Menu
                     sweet = false;
                     ingredients.Remove("Cane Sugar");
                 }
+                NotifyOfPropertyChanged("Ingredients");
+                NotifyOfPropertyChanged("Calories");
 
-                
             }
         }
 
@@ -90,7 +101,8 @@ namespace DinoDiner.Menu
                         }
                         break;
                 }
-
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Calories");
             }
         }
 
@@ -101,6 +113,8 @@ namespace DinoDiner.Menu
         {
             Lemon = true;
             ingredients.Add("Lemon");
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
 
@@ -114,6 +128,8 @@ namespace DinoDiner.Menu
             if (Sweet)
             {
                 ingredients.Add("Cane Sugar");
+                NotifyOfPropertyChanged("Ingredients");
+                
             }
             
         }
@@ -139,6 +155,28 @@ namespace DinoDiner.Menu
 
             }
             return "";
+        }
+
+        public string Description
+        {
+            get {
+                return this.ToString();
+            }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (Lemon)
+                {
+                    special.Add("Add Lemon");
+                }
+
+
+                return special.ToArray();
+            }
         }
     }
 }

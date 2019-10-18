@@ -203,5 +203,78 @@ namespace MenuTest.Drinks
             soda.Size = Size.Large;
             Assert.Equal<double>(32*2, soda.Calories);
         }
+
+
+        [Fact]
+        public void DescriptionShouldMatch()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            Assert.Equal(tt.Size + " Tyrannotea", tt.Description);
+        }
+
+        [Fact]
+        public void DescriptionShouldSmallMatch()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            tt.Size = Size.Small;
+            Assert.Equal(tt.Size + " Tyrannotea", tt.Description);
+        }
+        [Fact]
+        public void DescriptionShouldMediumMatch()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            tt.Size = Size.Medium;
+            Assert.Equal(tt.Size + " Tyrannotea", tt.Description);
+        }
+        [Fact]
+        public void DescriptionShouldLargeMatch()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            tt.Size = Size.Large;
+            Assert.Equal(tt.Size + " Tyrannotea", tt.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            Assert.Empty(tt.Special);
+        }
+
+        [Fact]
+        public void AddLemonSouldAddToSpecial()
+        {
+            Tyrannotea tt = new Tyrannotea();
+            tt.AddLemon();
+            Assert.Collection<string>(tt.Special,
+                item =>
+                {
+                    Assert.Equal("Add Lemon", item);
+                });
+        }
+
+
+
+        [Fact]
+        public void AddLemonShouldNotifySpecialChange()
+        {
+            Tyrannotea tt = new Tyrannotea();
+
+            Assert.PropertyChanged(tt, "Special", () =>
+            {
+                tt.AddLemon();
+            });
+        }
+
+        [Fact]
+        public void SizeChangeShouldNotifyPriceChange()
+        {
+            Tyrannotea tt = new Tyrannotea();
+
+            Assert.PropertyChanged(tt, "Price", () =>
+            {
+                tt.Size = Size.Large;
+            });
+        }
     }
 }

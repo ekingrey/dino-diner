@@ -189,5 +189,56 @@ namespace MenuTest.Drinks
             soda.Size = Size.Large;
             Assert.Equal<double>(208, soda.Calories);
         }
+
+        [Fact]
+        public void DescriptionShouldMatch()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Equal(soda.Size + " " + soda.Flavor +" Sodasaurus", soda.Description);
+        }
+
+        [Fact]
+        public void DescriptionShouldSmallMatch()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Small;
+            Assert.Equal(soda.Size + " " + soda.Flavor + " Sodasaurus", soda.Description);
+        }
+        [Fact]
+        public void DescriptionShouldMediumMatch()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Medium;
+            Assert.Equal(soda.Size + " " + soda.Flavor + " Sodasaurus", soda.Description);
+        }
+        [Fact]
+        public void DescriptionShouldLargeMatch()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            soda.Size = Size.Large;
+            Assert.Equal(soda.Size + " " + soda.Flavor + " Sodasaurus", soda.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            Sodasaurus soda = new Sodasaurus();
+            Assert.Empty(soda.Special);
+        }
+
+        
+
+        
+
+        [Fact]
+        public void SizeChangeShouldNotifyPriceChange()
+        {
+            Sodasaurus soda = new Sodasaurus();
+
+            Assert.PropertyChanged(soda, "Price", () =>
+            {
+                soda.Size = Size.Large;
+            });
+        }
     }
 }

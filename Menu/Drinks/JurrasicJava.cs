@@ -5,12 +5,21 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
-
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class JurrasicJava : Drink
+    public class JurrasicJava : Drink, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// leaves room in the drink for cream
         /// </summary>
@@ -46,7 +55,8 @@ namespace DinoDiner.Menu
                         Calories = 8;
                         break;
                 }
-
+                NotifyOfPropertyChanged("Calories");
+                NotifyOfPropertyChanged("Price");
             }
         }
 
@@ -64,11 +74,15 @@ namespace DinoDiner.Menu
         public void LeaveRoomForCream()
         {
             RoomForCream = true;
+            
+            NotifyOfPropertyChanged("Special");
         }
             
         public void AddIce()
         {
             Ice = true;
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
 
@@ -78,22 +92,47 @@ namespace DinoDiner.Menu
             {
                 case (Size.Small):
                     if(Decaf)
-                    return "Small Decaf Jurassic Java";
-                    else return "Small Jurassic Java";
+                    return "Small Decaf Jurrasic Java";
+                    else return "Small Jurrasic Java";
 
                 case (Size.Medium):
                     if (Decaf)
-                        return "Medium Decaf Jurassic Java";
-                    else return "Medium Jurassic Java";
+                        return "Medium Decaf Jurrasic Java";
+                    else return "Medium Jurrasic Java";
 
                 case (Size.Large):
                     if (Decaf)
-                        return "Large Decaf Jurassic Java";
-                    else return "Large Jurassic Java";
+                        return "Large Decaf Jurrasic Java";
+                    else return "Large Jurrasic Java";
 
             }
             return "";
         }
 
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (RoomForCream)
+                {
+                    special.Add("Room For Cream");
+                }
+                if (Ice)
+                {
+                    special.Add("Add Ice");
+                }
+
+                return special.ToArray();
+            }
+        }
     }
 }

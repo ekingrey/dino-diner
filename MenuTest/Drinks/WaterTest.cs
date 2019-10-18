@@ -133,5 +133,78 @@ namespace MenuTest.Drinks
             Assert.False(soda.Ice);
 
         }
+
+
+        [Fact]
+        public void DescriptionShouldMatch()
+        {
+            Water w = new Water();
+            Assert.Equal(w.Size +" Water", w.Description);
+        }
+
+        [Fact]
+        public void DescriptionShouldSmallMatch()
+        {
+            Water w = new Water();
+            w.Size = Size.Small;
+            Assert.Equal(w.Size + " Water", w.Description);
+        }
+        [Fact]
+        public void DescriptionShouldMediumMatch()
+        {
+            Water w = new Water();
+            w.Size = Size.Medium;
+            Assert.Equal(w.Size + " Water", w.Description);
+        }
+        [Fact]
+        public void DescriptionShouldLargeMatch()
+        {
+            Water w = new Water();
+            w.Size = Size.Large;
+            Assert.Equal(w.Size + " Water", w.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            Water w = new Water();
+            Assert.Empty(w.Special);
+        }
+
+        [Fact]
+        public void AddLemonSouldAddToSpecial()
+        {
+            Water w = new Water();
+            w.AddLemon();
+            Assert.Collection<string>(w.Special,
+                item =>
+                {
+                    Assert.Equal("Add Lemon", item);
+                });
+        }
+
+
+
+        [Fact]
+        public void AddLemonShouldNotifySpecialChange()
+        {
+            Water w = new Water();
+
+            Assert.PropertyChanged(w, "Special", () =>
+            {
+                w.AddLemon();
+            });
+        }
+
+        [Fact]
+        public void SizeChangeShouldNotifyPriceChange()
+        {
+            Water w = new Water();
+            
+            Assert.PropertyChanged(w, "Price", () =>
+            {
+                w.Size = Size.Large;
+            });
+        }
     }
 }

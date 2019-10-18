@@ -112,7 +112,7 @@ namespace MenuTest.Entree
             Assert.Collection<string>(dn.Special,
                 item =>
                 {
-                    Assert.Equal(1 +" Nuggets Added", item);
+                    Assert.Equal(1 + " Extra Nuggets", item);
                 });
         }
     }

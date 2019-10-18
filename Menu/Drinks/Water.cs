@@ -5,13 +5,21 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
-
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class Water : Drink
+    public class Water : Drink, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
 
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// adds a lemon to the tea
         /// </summary>
@@ -42,7 +50,8 @@ namespace DinoDiner.Menu
                         Calories = 0;
                         break;
                 }
-
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Calories");
             }
         }
 
@@ -62,6 +71,8 @@ namespace DinoDiner.Menu
         public void AddLemon()
         {
             Lemon = true;
+            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Special");
         }
 
 
@@ -80,6 +91,24 @@ namespace DinoDiner.Menu
 
             }
             return "";
+        }
+        public string Description
+        {
+            get { return this.ToString(); }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                if (Lemon)
+                {
+                    special.Add("Add Lemon");
+                }
+
+                return special.ToArray();
+            }
         }
 
     }

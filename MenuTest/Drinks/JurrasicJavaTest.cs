@@ -139,5 +139,87 @@ namespace MenuTest.Drinks
             soda.AddIce();
             Assert.True(soda.Ice);
         }
+
+        [Fact]
+        public void DescriptionShouldMatch()
+        {
+            JurrasicJava jj = new JurrasicJava();
+            Assert.Equal(jj.Size + " Jurrasic Java", jj.Description);
+        }
+
+        [Fact]
+        public void DescriptionShouldSmallMatch()
+        {
+            JurrasicJava jj = new JurrasicJava();
+            jj.Size = Size.Small;
+            Assert.Equal(jj.Size + " Jurrasic Java", jj.Description);
+        }
+        [Fact]
+        public void DescriptionShouldMediumMatch()
+        {
+            JurrasicJava jj = new JurrasicJava();
+            jj.Size = Size.Medium;
+            Assert.Equal(jj.Size + " Jurrasic Java", jj.Description);
+        }
+        [Fact]
+        public void DescriptionShouldLargeMatch()
+        {
+            JurrasicJava jj = new JurrasicJava();
+            jj.Size = Size.Large;
+            Assert.Equal(jj.Size + " Jurrasic Java", jj.Description);
+        }
+
+        [Fact]
+        public void SpecialShouldBeEmptyByDefault()
+        {
+            JurrasicJava jj = new JurrasicJava();
+            Assert.Empty(jj.Special);
+        }
+
+        [Fact]
+        public void RoomSouldAddToSpecial()
+        {
+            JurrasicJava jj = new JurrasicJava();
+            jj.LeaveRoomForCream();
+            Assert.Collection<string>(jj.Special,
+                item =>
+                {
+                    Assert.Equal("Room For Cream", item);
+                });
+        }
+        [Fact]
+        public void AddIceAddToSpecial()
+        {
+            JurrasicJava jj = new JurrasicJava();
+            jj.AddIce();
+            Assert.Collection<string>(jj.Special,
+                item =>
+                {
+                    Assert.Equal("Add Ice", item);
+                });
+        }
+
+
+        [Fact]
+        public void AddRoomShouldNotifySpecialChange()
+        {
+            JurrasicJava jj = new JurrasicJava();
+
+            Assert.PropertyChanged(jj, "Special", () =>
+            {
+                jj.LeaveRoomForCream();
+            });
+        }
+
+        [Fact]
+        public void SizeChangeShouldNotifyPriceChange()
+        {
+            JurrasicJava jj = new JurrasicJava();
+
+            Assert.PropertyChanged(jj, "Price", () =>
+            {
+                jj.Size = Size.Large;
+            });
+        }
     }
 }

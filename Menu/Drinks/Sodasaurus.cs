@@ -5,12 +5,21 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using DinoDiner.Menu;
-
+using System.ComponentModel;
 
 namespace DinoDiner.Menu
 {
-    public class Sodasaurus : Drink
+    public class Sodasaurus : Drink, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         /// <summary>
         /// holds the flavor of the drink
         /// </summary>
@@ -43,7 +52,8 @@ namespace DinoDiner.Menu
                         Calories = 208;
                         break;
                 }
-
+                NotifyOfPropertyChanged("Calories");
+                NotifyOfPropertyChanged("Price");
             }
         }
         
@@ -73,5 +83,21 @@ namespace DinoDiner.Menu
             return "";
         }
 
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                return special.ToArray();
+            }
+        }
     }
 }
