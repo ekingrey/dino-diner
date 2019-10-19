@@ -47,7 +47,7 @@ namespace DinoDiner.Menu
             Price += .25;
             Calories += 59;
             ingredients.Add("Chicken Nugget");
-            NotifyOfPropertyChanged("Ingredients");
+            NotifyOfPropertyChanged("Description");
             NotifyOfPropertyChanged("Special");
             NotifyOfPropertyChanged("Price");
         }

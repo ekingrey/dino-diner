@@ -39,8 +39,8 @@ namespace DinoDiner.Menu
                     sweet = false;
                     ingredients.Remove("Cane Sugar");
                 }
-                NotifyOfPropertyChanged("Ingredients");
-                NotifyOfPropertyChanged("Calories");
+                NotifyOfPropertyChanged("Description");
+                //NotifyOfPropertyChanged("Calories");
 
             }
         }
@@ -102,7 +102,7 @@ namespace DinoDiner.Menu
                         break;
                 }
                 NotifyOfPropertyChanged("Price");
-                NotifyOfPropertyChanged("Calories");
+                NotifyOfPropertyChanged("Description");
             }
         }
 
@@ -128,7 +128,7 @@ namespace DinoDiner.Menu
             if (Sweet)
             {
                 ingredients.Add("Cane Sugar");
-                NotifyOfPropertyChanged("Ingredients");
+                //NotifyOfPropertyChanged("Ingredients");
                 
             }
             
