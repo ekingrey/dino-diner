@@ -46,7 +46,7 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             ingredients.Remove("Whole Wheat Bun");
-            NotifyOfPropertyChanged("Ingredients");
+           // NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -56,7 +56,7 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Pickle");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -66,7 +66,7 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Ketchup");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -76,7 +76,7 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Mustard");
-            NotifyOfPropertyChanged("Ingredients");
+           // NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -86,7 +86,7 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Mayo");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -96,7 +96,7 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Tomato");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -106,7 +106,7 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Lettuce");
-            NotifyOfPropertyChanged("Ingredients");
+           // NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -116,7 +116,7 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Onion");
-            NotifyOfPropertyChanged("Ingredients");
+           // NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
 

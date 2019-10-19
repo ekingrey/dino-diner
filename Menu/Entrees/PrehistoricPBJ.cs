@@ -37,7 +37,7 @@ namespace DinoDiner.Menu
         public void HoldPeanutButter()
         {
             ingredients.Remove("Peanut Butter");
-            NotifyOfPropertyChanged("Ingredients");
+           // NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
 
@@ -48,7 +48,7 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Jelly");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         public override string ToString()

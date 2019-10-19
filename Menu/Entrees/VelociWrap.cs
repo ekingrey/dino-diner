@@ -40,7 +40,7 @@ namespace DinoDiner.Menu
         public void HoldDressing()
         {
             ingredients.Remove("Ceasar Dressing");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -50,7 +50,7 @@ namespace DinoDiner.Menu
         {
            
             ingredients.Remove("Romaine Lettuce");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -60,7 +60,7 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Parmesan Cheese");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
 

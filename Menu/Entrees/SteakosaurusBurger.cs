@@ -39,7 +39,7 @@ namespace DinoDiner.Menu
         public void HoldBun()
         {
             ingredients.Remove("Whole Wheat Bun");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -49,7 +49,7 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Pickle");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -59,7 +59,7 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Ketchup");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
         /// <summary>
@@ -69,7 +69,7 @@ namespace DinoDiner.Menu
         {
             
             ingredients.Remove("Mustard");
-            NotifyOfPropertyChanged("Ingredients");
+            //NotifyOfPropertyChanged("Ingredients");
             NotifyOfPropertyChanged("Special");
         }
 
