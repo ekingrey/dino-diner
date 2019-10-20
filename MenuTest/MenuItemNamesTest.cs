@@ -127,8 +127,8 @@ namespace MenuTest
             JurrasicJava java = new JurrasicJava();
             java.Size = size;
             java.Decaf = decaf;
-            if (decaf) Assert.Equal($"{size} Decaf Jurassic Java", java.ToString());
-            else Assert.Equal($"{size} Jurassic Java", java.ToString());
+            if (decaf) Assert.Equal($"{size} Decaf Jurrasic Java", java.ToString());
+            else Assert.Equal($"{size} Jurrasic Java", java.ToString());
         }
 
 
