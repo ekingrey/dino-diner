@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
 {
 
     
-    public abstract class Side : IMenuItem
+    public abstract class Side : IMenuItem, IOrderItem
     {
 
         protected List<string> ingredients = new List<string>();
@@ -33,6 +33,16 @@ namespace DinoDiner.Menu
         /// Gets or sets the size
         /// </summary>
         public virtual Size Size { get; set; }
+
+        /// <summary>
+        /// gets the description
+        /// </summary>
+        public virtual string Description { get; }
+
+        /// <summary>
+        /// gets the special
+        /// </summary>
+        public virtual string[] Special { get; }
 
     }
 }

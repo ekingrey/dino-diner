@@ -80,7 +80,7 @@ namespace DinoDiner.Menu
             return "";
         }
 
-        public string Description
+        public override string Description
         {
             get
             {
@@ -88,7 +88,7 @@ namespace DinoDiner.Menu
             }
         }
 
-        public string[] Special
+        public override string[] Special
         {
             get
             {

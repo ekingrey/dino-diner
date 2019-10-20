@@ -9,7 +9,7 @@ using System.Text;
 namespace DinoDiner.Menu
 {
 
-    public abstract class Drink: IMenuItem
+    public abstract class Drink: IMenuItem, IOrderItem
     {
         
         protected readonly List<string> ingredients = new List<string>();
@@ -42,6 +42,16 @@ namespace DinoDiner.Menu
         {
             Ice = false;
         }
+
+        /// <summary>
+        /// gets the description
+        /// </summary>
+        public virtual string Description { get; }
+
+        /// <summary>
+        /// gets the special
+        /// </summary>
+        public virtual string[] Special { get; }
 
     }
 }

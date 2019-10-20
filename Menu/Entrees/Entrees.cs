@@ -5,12 +5,21 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.ComponentModel;
 namespace DinoDiner.Menu
 {
 
-    public abstract class Entrees : IMenuItem
+    public abstract class Entrees : IMenuItem, IOrderItem, INotifyPropertyChanged
     {
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         protected readonly List<string> ingredients = new List<string>();
         /// <summary> 
@@ -31,6 +40,15 @@ namespace DinoDiner.Menu
             get { return new List<string>(ingredients); }
         }
 
-        
+        /// <summary>
+        /// gets the description
+        /// </summary>
+        public virtual string Description { get; }
+
+        /// <summary>
+        /// gets the special
+        /// </summary>
+        public virtual string[] Special { get; }
+
     }
 }
