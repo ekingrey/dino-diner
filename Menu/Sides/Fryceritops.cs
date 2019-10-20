@@ -5,11 +5,21 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.ComponentModel;
 namespace DinoDiner.Menu
 {
-    public class Fryceritops : Side
+    public class Fryceritops : Side, IOrderItem, INotifyPropertyChanged
     {
+
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void NotifyOfPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         private Size size;
         /// <summary>
         /// gets or sets the size of the side
@@ -35,6 +45,8 @@ namespace DinoDiner.Menu
                         Calories = 480;
                         break;
                 }
+                NotifyOfPropertyChanged("Price");
+                NotifyOfPropertyChanged("Description");
             }
             get { return size; }
         }
@@ -67,6 +79,25 @@ namespace DinoDiner.Menu
 
             }
             return "";
+        }
+
+
+        public string Description
+        {
+            get
+            {
+                return this.ToString();
+            }
+        }
+
+        public string[] Special
+        {
+            get
+            {
+                List<string> special = new List<string>();
+                
+                return special.ToArray();
+            }
         }
 
     }
