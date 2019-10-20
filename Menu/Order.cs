@@ -10,12 +10,24 @@ namespace DinoDiner.Menu
 
         ObservableCollection<IOrderItem> Items { get; set; }
 
-        public double SubtotalCost { get; }
+        public double SubtotalCost {
+            get
+            {
+                double sum = 0;
+                foreach(IOrderItem item in Items){
+                    sum += item.Price;
+                }
+                if (sum >= 0)
+                    return sum;
+                else
+                    return 0;
+            }
+        }
 
         public double SalesTaxRate { get; protected set; }
 
-        public double SalesTaxCost { get; }
+        public double SalesTaxCost { get => SalesTaxRate * SubtotalCost; }
 
-        public double TotalCost { get; }
+        public double TotalCost { get => SalesTaxCost + SubtotalCost; }
     }
 }
