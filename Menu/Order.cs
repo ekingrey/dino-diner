@@ -8,7 +8,7 @@ namespace DinoDiner.Menu
     public class Order
     {
 
-        ObservableCollection<IOrderItem> Items { get; set; }
+        public ObservableCollection<IOrderItem> Items { get; set; }
 
         public double SubtotalCost {
             get
@@ -29,5 +29,10 @@ namespace DinoDiner.Menu
         public double SalesTaxCost { get => SalesTaxRate * SubtotalCost; }
 
         public double TotalCost { get => SalesTaxCost + SubtotalCost; }
+
+        public Order()
+        {
+            Items = new ObservableCollection<IOrderItem>();
+        }
     }
 }
