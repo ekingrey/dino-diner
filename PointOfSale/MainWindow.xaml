@@ -9,11 +9,12 @@
         Title="MainWindow" Height="450" Width="800">
     
     <DockPanel>
+        
         <local:OrderList DockPanel.Dock="Right" Width="200" Background="LightSteelBlue">
             
             
             
         </local:OrderList>
-        <Frame Source="MenuCategorySelection.xaml"></Frame>
+        <Frame Name="OrderUI" LoadCompleted="OnLoadCompleted" DataContextChanged="OnDataContextChanged"  Source="MenuCategorySelection.xaml"></Frame>
     </DockPanel>
 </Window>

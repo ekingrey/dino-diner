@@ -38,7 +38,7 @@
 
         <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="0"> Side</TextBlock>
         <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelectFryceritops" Grid.Row="1" Grid.Column="0">
             Fryceritops
             <Button.Background>
 
@@ -71,9 +71,9 @@
             </Button.Background>
         </Button>
 
-        <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
-        <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
-        <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
+        <RadioButton Tag="Small" Click="OnChangeSize"  Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
+        <RadioButton Tag="Medium" Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
+        <RadioButton Tag="Large" Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
 
     </Grid>
 </Page>
