@@ -21,14 +21,21 @@ namespace PointOfSale
     /// </summary>
     public partial class OrderList : UserControl
     {
+
+        public NavigationService NavigationService { get; set; }
+
         public OrderList()
         {
             InitializeComponent();
         }
 
-        private void OnSelectionChanged(object sender, EventArgs arge)
+        private void OnSelectionChanged(object sender, SelectionChangedEventArgs args)
         {
-            //OrderItems.SelectedItems
+
+            if(OrderItems.SelectedItem is Side side)
+            {
+                NavigationService.Navigate(new SideSelection(side));
+            }
         }
 
         private void RemoveItem(object sender, RoutedEventArgs args)

@@ -33,6 +33,8 @@ namespace PointOfSale
             //sb.HoldBun();
             //order.Items.Add(sb);
             DataContext =  order;
+
+            OrderList.NavigationService = OrderUI.NavigationService;
            
         }
 

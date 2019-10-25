@@ -37,9 +37,9 @@ namespace MenuTest
                 d.Price = 2;
                 e.Price = 5;
                 s.Price = 3;
-                o.Items.Add(d);
-                o.Items.Add(e);
-                o.Items.Add(s);
+                o.Add(d);
+                o.Add(e);
+                o.Add(s);
 
                 Assert.Equal<double>((ep + sp + dp) + ((ep + sp + dp) * t), o.SubtotalCost);
 
@@ -60,9 +60,9 @@ namespace MenuTest
                 d.Price = 2;
                 e.Price = -10;
                 s.Price = 3;
-                o.Items.Add(d);
-                o.Items.Add(e);
-                o.Items.Add(s);
+                o.Add(d);
+                o.Add(e);
+                o.Add(s);
 
                 Assert.Equal<double>(0, o.SubtotalCost);
 

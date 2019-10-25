@@ -9,8 +9,8 @@
         Title="MainWindow" Height="450" Width="800">
     
     <DockPanel>
-        
-        <local:OrderList DockPanel.Dock="Right" Width="200" Background="LightSteelBlue">
+
+        <local:OrderList x:Name="OrderList" DockPanel.Dock="Right" Width="200" Background="LightSteelBlue">
             
             
             

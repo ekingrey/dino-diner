@@ -46,7 +46,7 @@
 
             </Button.Background>
         </Button>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">
+        <Button  FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelectMMC" Grid.Row="2" Grid.Column="0">
             Meteor Mac &amp; Cheese
             <Button.Background>
 
@@ -54,7 +54,7 @@
 
             </Button.Background>
         </Button>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelectMezzorellaSticks" Grid.Row="3" Grid.Column="0">
             Mezzorella Sticks
             <Button.Background>
 
@@ -62,7 +62,7 @@
 
             </Button.Background>
         </Button>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="4" Grid.Column="0">
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelectTriceritots" Grid.Row="4" Grid.Column="0">
             Triceritots
             <Button.Background>
 
