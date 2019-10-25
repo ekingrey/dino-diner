@@ -42,7 +42,7 @@ namespace PointOfSale
             if(DataContext is Order order)
             {
                 side = new Fryceritops();
-                order.Items.Add(side);
+                order.Add(side);
             }
 
         }

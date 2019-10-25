@@ -2,6 +2,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 
@@ -13,6 +14,9 @@ namespace DinoDiner.Menu
     {
         
         protected readonly List<string> ingredients = new List<string>();
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
         /// <summary> 
         /// Gets and sets the price
         /// </summary>
