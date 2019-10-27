@@ -31,6 +31,10 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.drink = drink;
+            if (drink is Sodasaurus soda)
+            {
+                sdf.IsEnabled = true;
+            }
         }
 
         private void OnSelectJurrasicJava(object sender, RoutedEventArgs args)
@@ -38,7 +42,14 @@ namespace PointOfSale
 
             if (DataContext is Order order)
             {
+                sdf.IsEnabled = true;
                 drink = new JurrasicJava();
+                if (drink is JurrasicJava java)
+                {
+                   
+                }
+
+                //if(drink)
                 order.Add(drink);
             }
 
@@ -49,7 +60,15 @@ namespace PointOfSale
 
             if (DataContext is Order order)
             {
+                //NavigationService.Navigate(new FlavorSelection());
+                sdf.IsEnabled = true;
                 drink = new Sodasaurus();
+                if (drink is Sodasaurus soda)
+                {
+                    //soda.Flavor=SodasaurusFlavor(drink);
+                }
+
+                //if(drink)
                 order.Add(drink);
             }
 
@@ -60,8 +79,18 @@ namespace PointOfSale
 
             if (DataContext is Order order)
             {
-                drink = new Tyrannotea();
                 lemon.IsEnabled = true;
+                sdf.IsEnabled = true;
+                drink = new Tyrannotea();
+                if (drink is Tyrannotea tea)
+                {
+                    if (tea.Lemon)
+                    {
+                        tea.AddLemon();
+                    }
+                }
+
+                //if(drink)
                 order.Add(drink);
             }
 
@@ -88,6 +117,35 @@ namespace PointOfSale
 
 
         }
+
+        private void MakeDecaf(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                if (sender is FrameworkElement element)
+                {
+                    if (drink is JurrasicJava java)
+                    {
+                        java.Decaf = true;
+
+                    }
+                    if (drink is Tyrannotea tea)
+                    {
+                        tea.Sweet = true;
+
+                    }
+                    if (drink is Sodasaurus soda)
+                    {
+                        NavigationService.Navigate(new FlavorSelection(soda));
+
+                    }
+
+                }
+
+            }
+            sdf.IsEnabled = false;
+        }
+
         private void AddLemon(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
@@ -99,9 +157,15 @@ namespace PointOfSale
                         water.Lemon = true;
                         
                     }
+                    if (drink is Tyrannotea tea)
+                    {
+                        tea.Lemon = true;
+
+                    }
                 }
                 
             }
+            lemon.IsEnabled = false;
         }
         private void OnChangeSize(object sender, RoutedEventArgs args)
         {
@@ -121,7 +185,7 @@ namespace PointOfSale
         void SelectFlavor(object sender, RoutedEventArgs args)
         {
 
-            NavigationService.Navigate(new FlavorSelection());
+           // NavigationService.Navigate(new FlavorSelection());
 
         }
 

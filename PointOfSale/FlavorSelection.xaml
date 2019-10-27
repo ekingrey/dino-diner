@@ -31,7 +31,7 @@
         </Grid.ColumnDefinitions>
         <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Flavor</TextBlock>
 
-        <Button Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="0">Cherry
+        <Button Tag="Cherry" Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelect" Grid.Row="1" Grid.Column="0">Cherry
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="Black"/>
@@ -39,7 +39,7 @@
                 </RadialGradientBrush>
             </Button.Background>
         </Button>
-        <Button Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Lime
+        <Button Tag="Lime" Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelect" Grid.Row="2" Grid.Column="0">Lime
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="Black"/>
@@ -47,7 +47,7 @@
                 </RadialGradientBrush>
             </Button.Background>
         </Button>
-        <Button Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">Vanilla
+        <Button Tag="Vanilla" Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelect" Grid.Row="3" Grid.Column="0">Vanilla
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="Black"/>
@@ -58,7 +58,7 @@
 
 
 
-        <Button Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="1" >Chocolate
+        <Button Tag="Chocolate" Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelect" Grid.Row="1" Grid.Column="1" >Chocolate
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="Black"/>
@@ -66,7 +66,7 @@
                 </RadialGradientBrush>
             </Button.Background>
         </Button>
-        <Button Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="1">Orange
+        <Button Tag="Orange" Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelect" Grid.Row="2" Grid.Column="1">Orange
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="Black"/>
@@ -75,7 +75,7 @@
             </Button.Background>
         </Button>
 
-        <Button Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">Cola
+        <Button Tag="Cola" Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelect" Grid.Row="1" Grid.Column="2">Cola
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="Black"/>
@@ -83,13 +83,15 @@
                 </RadialGradientBrush>
             </Button.Background>
         </Button>
-        <Button Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Root Beer
+        <Button Tag="RootBeer" Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelect" Grid.Row="2" Grid.Column="2">Root Beer
             <Button.Background>
                 <RadialGradientBrush>
                     <GradientStop Color="Black"/>
                     <GradientStop Color="#FF682F07" Offset="1"/>
                 </RadialGradientBrush>
             </Button.Background>
+        </Button>
+        <Button Foreground="White" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDone" Grid.Row="3" Grid.Column="3" Background="Black">Done
         </Button>
     </Grid>
 </Page>
