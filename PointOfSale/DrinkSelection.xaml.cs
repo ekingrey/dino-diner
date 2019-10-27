@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DinoDiner.Menu;
+using DDSize = DinoDiner.Menu.Size;
 
 namespace PointOfSale
 {
@@ -32,6 +33,62 @@ namespace PointOfSale
             this.drink = drink;
         }
 
+        private void OnSelectJurrasicJava(object sender, RoutedEventArgs args)
+        {
+
+            if (DataContext is Order order)
+            {
+                drink = new JurrasicJava();
+                order.Add(drink);
+            }
+
+
+        }
+        private void OnSelectSodasaurus(object sender, RoutedEventArgs args)
+        {
+
+            if (DataContext is Order order)
+            {
+                drink = new Sodasaurus();
+                order.Add(drink);
+            }
+
+
+        }
+        private void OnSelectTea(object sender, RoutedEventArgs args)
+        {
+
+            if (DataContext is Order order)
+            {
+                drink = new Tyrannotea();
+                lemon.IsEnabled = true;
+                order.Add(drink);
+            }
+
+
+        }
+        private void OnSelectWater(object sender, RoutedEventArgs args)
+        {
+
+            if (DataContext is Order order)
+            {
+                drink = new Water();
+                lemon.IsEnabled = true;
+                order.Add(drink);
+            }
+
+
+        }
+
+        private void OnChangeSize(object sender, RoutedEventArgs args)
+        {
+            if (sender is FrameworkElement element)
+            {
+                drink.Size = (DDSize)Enum.Parse(typeof(DDSize), element.Tag.ToString());
+            }
+        }
+
+
         void SelectDrink(object sender, RoutedEventArgs args)
         {
 
@@ -42,6 +99,11 @@ namespace PointOfSale
         {
 
             NavigationService.Navigate(new FlavorSelection());
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

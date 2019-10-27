@@ -44,6 +44,7 @@ namespace PointOfSale
             {
                 entree = new Brontowurst();
                 order.Add(entree);
+               
                 
                 NavigationService.Navigate(new MenuCategorySelection());
             }

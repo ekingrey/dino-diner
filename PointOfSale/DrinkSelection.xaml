@@ -42,28 +42,28 @@
         <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="0"> Drink</TextBlock>
         <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="1"> Size</TextBlock>
         <TextBlock Foreground="White" FontWeight="Bold" FontSize="25" TextAlignment="Center" Grid.Column="2"> Special</TextBlock>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectFlavor" Grid.Row="1" Grid.Column="0">Sodasaurus
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelectSodasaurus" Grid.Row="1" Grid.Column="0">Sodasaurus
             <Button.Background>
 
                 <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-14.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="0">Tyrannotea
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelectTea" Grid.Row="2" Grid.Column="0">Tyrannotea
             <Button.Background>
 
                 <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-12.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="0">Jurrasic Java
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelectJurrasicJava" Grid.Row="3" Grid.Column="0">Jurrasic Java
             <Button.Background>
 
                 <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-13.png" Stretch="UniformToFill" />
 
             </Button.Background>
         </Button>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="4" Grid.Column="0">Water
+        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="OnSelectWater" Grid.Row="4" Grid.Column="0">Water
             <Button.Background>
 
                 <ImageBrush Opacity=".6" ImageSource="Images/DinoDiner-15.png" Stretch="UniformToFill" />
@@ -71,14 +71,14 @@
             </Button.Background>
         </Button>
 
-        <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
-        <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
-        <RadioButton Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
+        <RadioButton Tag="Small" Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
+        <RadioButton Tag="Medium" Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
+        <RadioButton Tag="Large" Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
 
-        <Button FontSize="15" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">
+        <Button Name="sdf" IsEnabled="False" FontSize="15" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">
             <TextBlock>Sweet/<LineBreak/>Decaf/<LineBreak/>Flavor</TextBlock>
         </Button>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Add Lemon</Button>
-        <Button FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="2">Hold Ice</Button>
+        <Button Name="lemon" IsEnabled="False" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="2" Grid.Column="2">Add Lemon</Button>
+        <Button Name="ice" IsEnabled="False" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="2">Hold Ice</Button>
     </Grid>
 </Page>
