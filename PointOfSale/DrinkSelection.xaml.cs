@@ -72,14 +72,37 @@ namespace PointOfSale
 
             if (DataContext is Order order)
             {
-                drink = new Water();
                 lemon.IsEnabled = true;
+                drink = new Water();
+                if(drink is Water water)
+                {
+                    if (water.Lemon)
+                    {
+                        water.AddLemon();
+                    }
+                }
+                
+                //if(drink)
                 order.Add(drink);
             }
 
 
         }
-
+        private void AddLemon(object sender, RoutedEventArgs args)
+        {
+            if (DataContext is Order order)
+            {
+                if (sender is FrameworkElement element)
+                {
+                    if (drink is Water water)
+                    {
+                        water.Lemon = true;
+                        
+                    }
+                }
+                
+            }
+        }
         private void OnChangeSize(object sender, RoutedEventArgs args)
         {
             if (sender is FrameworkElement element)
