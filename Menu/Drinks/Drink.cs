@@ -45,6 +45,7 @@ namespace DinoDiner.Menu
         public virtual void HoldIce()
         {
             Ice = false;
+            
         }
 
         /// <summary>

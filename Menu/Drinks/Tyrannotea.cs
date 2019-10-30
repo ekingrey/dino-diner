@@ -45,6 +45,11 @@ namespace DinoDiner.Menu
             }
         }
 
+        public override void HoldIce()
+        {
+            Ice = false;
+            NotifyOfPropertyChanged("Special");
+        }
 
         /// <summary>
         /// adds a lemon to the tea

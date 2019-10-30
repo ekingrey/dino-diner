@@ -4,6 +4,7 @@ using System.Text;
 using System.ComponentModel;
 using DinoDiner.Menu;
 using Xunit;
+using Menu;
 
 namespace MenuTest
 {
@@ -367,7 +368,7 @@ namespace MenuTest
         [InlineData(Size.Large, "Description")]
         public void JurassicJavaSizeChangeShouldNotifyProperties(Size size, string property)
         {
-            JurassicJava java = new JurassicJava();
+            JurrasicJava java = new JurrasicJava();
             Assert.PropertyChanged(java, property, () =>
             {
                 java.Size = size;
@@ -377,7 +378,7 @@ namespace MenuTest
         [Fact]
         public void JurrasicJavaAddIceShouldNotifyPropertySpecial()
         {
-            JurassicJava java = new JurassicJava();
+            JurrasicJava java = new JurrasicJava();
             Assert.PropertyChanged(java, "Special", () =>
             {
                 java.AddIce();
@@ -387,7 +388,7 @@ namespace MenuTest
         [Fact]
         public void JurrasicJavaLeaveRoomForCreamShouldNotifyPropertySpecial()
         {
-            JurassicJava java = new JurassicJava();
+            JurrasicJava java = new JurrasicJava();
             Assert.PropertyChanged(java, "Special", () =>
             {
                 java.LeaveRoomForCream();
@@ -605,7 +606,7 @@ namespace MenuTest
         [InlineData(typeof(VelociWrap), Size.Small, "Special")]
         public void CretaceousComboChangingSizeShouldNotifyPropertyChanges(Type type, Size size, string propertyName)
         {
-            Entree entree = (Entree)Activator.CreateInstance(type);
+            Entrees entree = (Entrees)Activator.CreateInstance(type);
             CretaceousCombo combo = new CretaceousCombo(entree);
             Assert.PropertyChanged(combo, propertyName, () =>
             {

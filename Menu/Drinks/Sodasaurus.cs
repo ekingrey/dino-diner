@@ -85,6 +85,12 @@ namespace DinoDiner.Menu
             return "";
         }
 
+        public override void HoldIce()
+        {
+            Ice = false;
+            NotifyOfPropertyChanged("Special");
+        }
+
         public string Description
         {
             get
