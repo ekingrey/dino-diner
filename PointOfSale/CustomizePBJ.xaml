@@ -13,15 +13,30 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Click="OnHoldPeanutButter">Hold Peanut Butter</Button>
-        <Button Click="OnHoldJelly" Grid.Row="1">Hold Jelly</Button>
-        <Button Click="OnDone" Grid.Row="2" Grid.Column="2">Done</Button>
+        <Button Name="peanutButter" Visibility="Hidden" Click="OnHoldPeanutButter">Hold Peanut Butter</Button>
+        <Button Name="Jelly" Visibility="Hidden" Click="OnHoldJelly" Grid.Row="1">Hold Jelly</Button>
+        <Button Click="OnDone" Grid.Row="3" Grid.Column="3">Done</Button>
+        <Button Name="bun" Visibility="Hidden" Click="OnHoldBun" Grid.Row="2" Grid.Column="0">Hold Whole Wheat Bun</Button>
+        <Button Name="peppers" Visibility="Hidden" Click="OnHoldPeppers" Grid.Row="1" Grid.Column="1">Hold Peppers</Button>
+        <Button Name="onions" Visibility="Hidden" Click="OnHoldOnions" Grid.Row="0" Grid.Column="1">Hold Onions</Button>
+        <Button Name="pickles" Visibility="Hidden" Click="OnHoldPickles" Grid.Row="0" Grid.Column="2">Hole Pickles</Button>
+        <Button Name="ketchup" Visibility="Hidden" Click="OnHoldKetchup" Grid.Row="1" Grid.Column="2">Hold Ketchup</Button>
+        <Button Name="mustard" Visibility="Hidden" Click="OnHoldMustard" Grid.Row="3" Grid.Column="1">Hold Mustard</Button>
+        <Button Name="mayo" Visibility="Hidden" Click="OnHoldMayo" Grid.Row="0" Grid.Column="3">Hole Mayo</Button>
+        <Button Name="Tomate" Visibility="Hidden" Click="OnHoldTomato" Grid.Row="1" Grid.Column="3">Hold Tomato</Button>
+        <Button Name="lettuce" Visibility="Hidden" Click="OnHoldLettuce" Grid.Row="3" Grid.Column="0">Hold Lettuce</Button>
+        <Button Name="dressing" Visibility="Hidden" Click="OnHoldDressing" Grid.Row="2" Grid.Column="1">Hole Ceasar Dressing</Button>
+        <Button Name="cheese" Visibility="Hidden" Click="OnHoldCheese" Grid.Row="2" Grid.Column="2">Hold Parmesan Cheese</Button>
+        <Button Name="nugget" Visibility="Hidden" Click="AddNugget" Grid.Row="3" Grid.Column="2">Add Nugget</Button>
+
 
     </Grid>
 </Page>
