@@ -25,15 +25,18 @@ namespace PointOfSale
     public partial class CustomizePBJ : Page
     {
         private Entrees entree;
-        public CustomizePBJ(Entrees entree)
+        private bool combo;
+        public CustomizePBJ(Entrees entree, bool combo)
         {
 
             InitializeComponent();
-            if(entree is PrehistoricPBJ pbj)
+            this.combo = combo;
+            if (entree is PrehistoricPBJ pbj)
             {
                 peanutButter.Visibility = Visibility.Visible;
                 Jelly.Visibility = Visibility.Visible;
                 this.entree = pbj;
+                
             }
             if (entree is Brontowurst bw)
             {
@@ -238,7 +241,15 @@ namespace PointOfSale
         /// </summary>
         private void OnDone(object sender, RoutedEventArgs args)
         {
-            NavigationService.GoBack();
+            if (combo)
+            {
+                NavigationService.Navigate(new CustomizeCombo());
+            }
+            else
+            {
+                NavigationService.GoBack();
+            }
+            
         }
 
     }
