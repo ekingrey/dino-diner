@@ -136,7 +136,7 @@ namespace PointOfSale
 
         }
         /// <summary>
-        /// taes you to the customize page on button push
+        /// taes you to the customize page on button push 
         /// </summary>
         private void OnSelectVelociWrap(object sender, RoutedEventArgs args)
         {
