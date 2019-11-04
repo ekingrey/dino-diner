@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DDSize = DinoDiner.Menu.Size;
+using DinoDiner.Menu;
 
 namespace PointOfSale
 {
@@ -36,6 +38,14 @@ namespace PointOfSale
 
             NavigationService.Navigate(new SideSelection());
 
+        }
+
+        private void OnChangeSize(object sender, RoutedEventArgs args)
+        {
+            if (sender is FrameworkElement element)
+            {
+                side.Size = (DDSize)Enum.Parse(typeof(DDSize), element.Tag.ToString());
+            }
         }
     }
 }

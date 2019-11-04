@@ -189,6 +189,11 @@ namespace PointOfSale
 
         }
 
+        private void OnDone(object sender, RoutedEventArgs args)
+        {
+            NavigationService.GoBack();
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 

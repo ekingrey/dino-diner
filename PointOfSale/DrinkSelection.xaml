@@ -80,5 +80,7 @@
         </Button>
         <Button Name="lemon" IsEnabled="False" FontSize="25" FontWeight="Bold" Margin="4" Click="AddLemon" Grid.Row="2" Grid.Column="2">Add Lemon</Button>
         <Button Name="ice" IsEnabled="False" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="3" Grid.Column="2">Hold Ice</Button>
+
+        <Button  FontSize="25" FontWeight="Bold" Margin="20" Click="OnDone" Grid.Row="4" Grid.Column="2">Done</Button>
     </Grid>
 </Page>
