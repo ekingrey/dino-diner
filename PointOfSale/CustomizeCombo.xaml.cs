@@ -22,6 +22,8 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCombo : Page
     {
+        private Side side;
+        private Drink drink;
         public CustomizeCombo()
         {
             InitializeComponent();
@@ -35,8 +37,8 @@ namespace PointOfSale
         }
         void SelectSide(object sender, RoutedEventArgs args)
         {
-
             NavigationService.Navigate(new SideSelection());
+
 
         }
 
@@ -44,7 +46,8 @@ namespace PointOfSale
         {
             if (sender is FrameworkElement element)
             {
-                side.Size = (DDSize)Enum.Parse(typeof(DDSize), element.Tag.ToString());
+
+               
             }
         }
     }

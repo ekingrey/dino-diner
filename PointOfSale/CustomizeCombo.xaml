@@ -58,9 +58,9 @@
             </Button.Background>
         </Button>
 
-        <RadioButton Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
-        <RadioButton Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
-        <RadioButton Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
+        <RadioButton IsEnabled="False" Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" IsChecked="True" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="1" Grid.Column="1" GroupName = "Size" Content="Small" Name="SizeSmall"/>
+        <RadioButton IsEnabled="False" Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="2" Grid.Column="1" GroupName = "Size" Content="Medium" Name="SizeMedium"/>
+        <RadioButton IsEnabled="False" Click="OnChangeSize" Height="100" Width="400" Style="{StaticResource {x:Type ToggleButton}}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="25" FontWeight="Bold" Margin="4"  Grid.Row="3" Grid.Column="1" GroupName = "Size" Content="Large" Name="SizeLarge"/>
 
         <Button Grid.RowSpan="3" FontSize="25" FontWeight="Bold" Margin="4" Click="SelectDrink" Grid.Row="1" Grid.Column="2">Sodasaurus
             <Button.Background>

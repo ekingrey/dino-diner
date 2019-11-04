@@ -101,7 +101,7 @@ namespace PointOfSale
             {
                 PterodactylWings entree = new PterodactylWings();
                 order.Add(entree);
-                NavigationService.Navigate(new MenuCategorySelection());
+                NavigationService.Navigate(new CustomizeCombo());
             }
 
         }
