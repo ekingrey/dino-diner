@@ -1,4 +1,6 @@
-﻿
+﻿/* Sides.cs
+ * Ethan Kingrey
+ */
 
 using System;
 using System.Collections.Generic;

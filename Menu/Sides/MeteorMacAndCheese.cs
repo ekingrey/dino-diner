@@ -14,7 +14,10 @@ namespace DinoDiner.Menu
         /// an event handler for PropertyChanged events
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
-
+        /// <summary>
+        /// notifies of a property change
+        /// </summary>
+        /// <param name="propertyName"></param>
         protected void NotifyOfPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -62,6 +65,10 @@ namespace DinoDiner.Menu
             ingredients.Add("Cheese Product");
             ingredients.Add("Pork Sausage");
         }
+        /// <summary>
+        /// returns the description
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             switch (size)
@@ -78,6 +85,9 @@ namespace DinoDiner.Menu
             }
             return "";
         }
+        /// <summary>
+        /// returns the description
+        /// </summary>
         public string Description
         {
             get
@@ -85,6 +95,9 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
+        /// <summary>
+        /// adds to the special
+        /// </summary>
 
         public string[] Special
         {

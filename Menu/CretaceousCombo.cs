@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*CretaceousCombo.cs
+ * Author: Ethan Kingrey
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -10,13 +13,25 @@ namespace Menu
 {
     public class CretaceousCombo: IOrderItem
     {
-
+        /// <summary>
+        /// an event handler for PropertyChanged events
+        /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// notifies of a property change
+        /// </summary>
+        /// <param name="propertyName"></param>
         protected void NotifyOfPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+        /// <summary>
+        /// private backing vaiable
+        /// </summary>
         private Entrees entree;
+        /// <summary>
+        /// gets and sets the entree for the combo
+        /// </summary>
         public Entrees Entree { get { return entree; } protected set
             { entree = value;
                 entree.PropertyChanged += (object sender, PropertyChangedEventArgs args) =>
@@ -26,8 +41,13 @@ namespace Menu
 
             }
         }
-
+        /// <summary>
+        /// private backing variable
+        /// </summary>
         private Side side ;
+        /// <summary>
+        /// gets and sets the side
+        /// </summary>
         public Side Side
         {
             get { return side; }
@@ -37,8 +57,13 @@ namespace Menu
                 side.Size = size;
             }
         }
-
+        /// <summary>
+        /// private backing variable
+        /// </summary>
         private Drink drink = new Sodasaurus();
+        /// <summary>
+        /// gets and sets the drink for the combo
+        /// </summary>
         public Drink Drink
         {
             get { return drink; }
@@ -53,7 +78,9 @@ namespace Menu
                 drink.Size = size;
             }
         }
-
+        /// <summary>
+        /// gets the price
+        /// </summary>
         public double Price
         {
             get
@@ -62,7 +89,9 @@ namespace Menu
             }
 
         }
-
+        /// <summary>
+        /// gets the callories
+        /// </summary>
         public uint Calories
         {
             get
@@ -70,8 +99,13 @@ namespace Menu
                 return Entree.Calories + Side.Calories + Drink.Calories;
             }
         }
-
+        /// <summary>
+        /// private backing variable
+        /// </summary>
         private Size size = Size.Small;
+        /// <summary>
+        /// gets and sets the size
+        /// </summary>
         public Size Size
         {
             get
@@ -93,7 +127,9 @@ namespace Menu
 
             }
         }
-
+        /// <summary>
+        /// vreates a list of inc=gredients
+        /// </summary>
         public List<string> Ingredients
         {
             get
@@ -106,20 +142,28 @@ namespace Menu
             }
         }
 
-
+        /// <summary>
+        /// cunstructor
+        /// </summary>
+        /// <param name="entree"></param>
         public CretaceousCombo(Entrees entree)
         {
             Entree = entree;
             Side = new Fryceritops();
             Drink = new Water();
         }
-
+        /// <summary>
+        /// crates the description
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return (Entree.ToString() + " Combo");
         }
 
-
+        /// <summary>
+        /// returns the description
+        /// </summary>
         public string Description
         {
             get
@@ -128,7 +172,9 @@ namespace Menu
             }
         }
 
-
+        /// <summary>
+        /// creates a list of special
+        /// </summary>
         public string[] Special
         {
             get

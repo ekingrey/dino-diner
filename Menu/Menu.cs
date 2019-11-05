@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*Menu.cs
+ * Author: Ethan Kingrey
+ */
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,12 +9,26 @@ namespace DinoDiner.Menu
 {
     class Menu
     {
-
+        /// <summary>
+        /// list of availible items
+        /// </summary>
         private List<IMenuItem> availableItems = new List<IMenuItem>();
+        /// <summary>
+        /// list of availible items
+        /// </summary>
         private List<Entrees> availableEntrees = new List<Entrees>();
+        /// <summary>
+        /// list of availible items
+        /// </summary>
         private List<Side> availableSides = new List<Side>();
+        /// <summary>
+        /// list of availible items
+        /// </summary>
         private List<Drink> availableDrinks = new List<Drink>();
 
+        /// <summary>
+        /// crates a list of availible items
+        /// </summary>
         public List<IMenuItem> AvailableMenuItems
         {
             get
@@ -38,7 +55,9 @@ namespace DinoDiner.Menu
                 return availableItems;
             }
         }
-
+        /// <summary>
+        /// creates a list of avalible entrees
+        /// </summary>
         public List<Entrees> AvailableEntrees
         {
             get
@@ -54,7 +73,9 @@ namespace DinoDiner.Menu
                 return availableEntrees;
             }
         }
-
+        /// <summary>
+        /// creates a list of availible sides
+        /// </summary>
         public List<Side> AvailableSides
         {
             get
@@ -67,7 +88,9 @@ namespace DinoDiner.Menu
                 return availableSides;
             }
         }
-
+        /// <summary>
+        /// createas a list of availible drinks
+        /// </summary>
         public List<Drink> AvailableDrinks
         {
             get
@@ -80,7 +103,10 @@ namespace DinoDiner.Menu
                 return availableDrinks;
             }
         }
-
+        /// <summary>
+        /// creates a description
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             foreach (IMenuItem item in AvailableMenuItems)
