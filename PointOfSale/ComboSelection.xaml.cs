@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*ComboSelection.xaml.cs
+ * Ethan Kingrey
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,7 +28,11 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// takes tje user to the customize combo page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         void CustomCombo(object sender, RoutedEventArgs args)
         {
             if(DataContext is Entrees e)

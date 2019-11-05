@@ -26,6 +26,11 @@ namespace PointOfSale
     {
         private Entrees entree;
         private bool combo;
+        /// <summary>
+        /// the constructor
+        /// </summary>
+        /// <param name="entree"></param>
+        /// <param name="combo"></param>
         public CustomizePBJ(Entrees entree, bool combo)
         {
 

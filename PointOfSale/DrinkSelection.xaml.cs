@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* DrinkSelection.xaml.cs
+ * Author: Ethan Kingrey
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -27,6 +30,11 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// takes the user to the drink page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         public DrinkSelection(Drink drink)
         {
             InitializeComponent();
@@ -36,7 +44,11 @@ namespace PointOfSale
                 sdf.IsEnabled = true;
             }
         }
-
+       /// <summary>
+       /// sdds to the order
+       /// </summary>
+       /// <param name="sender"></param>
+       /// <param name="args"></param>
         private void OnSelectJurrasicJava(object sender, RoutedEventArgs args)
         {
 
@@ -55,6 +67,11 @@ namespace PointOfSale
 
 
         }
+        /// <summary>
+        /// sdds to the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnSelectSodasaurus(object sender, RoutedEventArgs args)
         {
 
@@ -74,6 +91,11 @@ namespace PointOfSale
 
 
         }
+        /// <summary>
+        /// sdds to the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnSelectTea(object sender, RoutedEventArgs args)
         {
 
@@ -96,6 +118,11 @@ namespace PointOfSale
 
 
         }
+        /// <summary>
+        /// sdds to the order
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnSelectWater(object sender, RoutedEventArgs args)
         {
 
@@ -117,7 +144,11 @@ namespace PointOfSale
 
 
         }
-
+        /// <summary>
+        /// makes it decaf
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void MakeDecaf(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
@@ -145,7 +176,11 @@ namespace PointOfSale
             }
             sdf.IsEnabled = false;
         }
-
+        /// <summary>
+        /// ads a lemon
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void AddLemon(object sender, RoutedEventArgs args)
         {
             if (DataContext is Order order)
@@ -167,6 +202,11 @@ namespace PointOfSale
             }
             lemon.IsEnabled = false;
         }
+        /// <summary>
+        /// changes the size
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnChangeSize(object sender, RoutedEventArgs args)
         {
             if (sender is FrameworkElement element)
@@ -175,20 +215,33 @@ namespace PointOfSale
             }
         }
 
-
+        /// <summary>
+        /// go to drink page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         void SelectDrink(object sender, RoutedEventArgs args)
         {
 
             NavigationService.Navigate(new DrinkSelection());
 
         }
+        /// <summary>
+        /// go to flavor page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         void SelectFlavor(object sender, RoutedEventArgs args)
         {
 
            // NavigationService.Navigate(new FlavorSelection());
 
         }
-
+        /// <summary>
+        /// go to main menue
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnDone(object sender, RoutedEventArgs args)
         {
             NavigationService.GoBack();

@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* MainWindow.xaml.cs
+ * Author: Ethan Kingrey
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,24 +40,38 @@ namespace PointOfSale
             OrderList.NavigationService = OrderUI.NavigationService;
            
         }
-
+        /// <summary>
+        /// passes the data context
+        /// </summary>
         private void PassDataContextToPage()
         {
             if(OrderUI.Content is Page page){
                 page.DataContext = OrderUI.DataContext;
             }
         }
-
+        /// <summary>
+        /// passes tje data context
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnLoadCompleted(Object sender, NavigationEventArgs args)
         {
             PassDataContextToPage();
         }
-
+        /// <summary>
+        /// passes teh data context
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnDataContextChanged(Object sender, DependencyPropertyChangedEventArgs args)
         {
             PassDataContextToPage();
         }
-
+        /// <summary>
+        /// go to main menue
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnReturnToCategorySelection(object sender, RoutedEventArgs args)
         {
             OrderUI.NavigationService.Navigate(new MenuCategorySelection());

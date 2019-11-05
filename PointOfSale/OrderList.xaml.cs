@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* OrderList.xaml.cs
+ * Author: Ethan Kingrey
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +31,11 @@ namespace PointOfSale
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// goes to the corosponding page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnSelectionChanged(object sender, SelectionChangedEventArgs args)
         {
 
@@ -45,7 +52,11 @@ namespace PointOfSale
                 NavigationService.Navigate(new EntreeSelection(entrees));
             }
         }
-
+        /// <summary>
+        /// removes the itrem
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void RemoveItem(object sender, RoutedEventArgs args)
         {
             if(DataContext is Order order)

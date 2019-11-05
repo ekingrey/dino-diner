@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* SideSelect.xaml.cs
+ * Author: Ethan Kingrey
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,7 +36,11 @@ namespace PointOfSale
             InitializeComponent();
             this.side = side;
         }
-
+        /// <summary>
+        /// goes to drink page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         void SelectDrink(object sender, RoutedEventArgs args)
         {
 
@@ -41,7 +48,11 @@ namespace PointOfSale
 
         }
 
-
+        /// <summary>
+        /// goes to corosponding page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnSelectFryceritops(object sender, RoutedEventArgs args)
         {
 
@@ -52,6 +63,11 @@ namespace PointOfSale
             }
 
         }
+        /// <summary>
+        /// goes to corosponding page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnSelectMMC(object sender, RoutedEventArgs args)
         {
 
@@ -62,6 +78,11 @@ namespace PointOfSale
             }
 
         }
+        /// <summary>
+        /// goes to corosponding page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnSelectMezzorellaSticks(object sender, RoutedEventArgs args)
         {
 
@@ -71,7 +92,12 @@ namespace PointOfSale
                 order.Add(side);
             }
         }
-            private void OnSelectTriceritots(object sender, RoutedEventArgs args)
+        /// <summary>
+        /// goes to corosponding page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
+        private void OnSelectTriceritots(object sender, RoutedEventArgs args)
             {
 
                 if (DataContext is Order order)
@@ -82,7 +108,11 @@ namespace PointOfSale
 
             }
         
-
+        /// <summary>
+        /// changes size
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnChangeSize(object sender, RoutedEventArgs args)
         {
             if(sender is FrameworkElement element)
@@ -90,7 +120,11 @@ namespace PointOfSale
                side.Size = (DDSize)Enum.Parse(typeof(DDSize), element.Tag.ToString());
             }
         }
-       
+        /// <summary>
+        /// goes to main menue page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnDone(object sender, RoutedEventArgs args)
         {
             NavigationService.GoBack();

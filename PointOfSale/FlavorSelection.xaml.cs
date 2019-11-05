@@ -1,4 +1,7 @@
-﻿using System;
+﻿/* FlavorSelection.xaml.cs
+ * Author: Ethan Kingrey
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,16 +37,24 @@ namespace PointOfSale
             InitializeComponent();
             this.drink = drink;
         }
-        
-       
 
+
+        /// <summary>
+        /// takes the user to the menue page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         void SelectDone(object sender, RoutedEventArgs args)
         {
 
             NavigationService.Navigate(new MenuCategorySelection());
 
         }
-
+        /// <summary>
+        /// changes the sze
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="args"></param>
         private void OnSelect(object sender, RoutedEventArgs args)
         {
 
