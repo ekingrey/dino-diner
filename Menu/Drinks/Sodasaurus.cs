@@ -16,6 +16,10 @@ namespace DinoDiner.Menu
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
 
+        /// <summary>
+        /// notifies of property change
+        /// </summary>
+        /// <param name="propertyName"></param>
         protected void NotifyOfPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -67,7 +71,10 @@ namespace DinoDiner.Menu
             ingredients.Add("Natural Flavors");
             ingredients.Add("Cane Sugar");
         }
-
+        /// <summary>
+        /// sets the deffifnition of the drink
+        /// </summary>
+        /// <returns>returns the description</returns>
         public override string ToString()
         {
             switch (size)
@@ -84,13 +91,17 @@ namespace DinoDiner.Menu
             }
             return "";
         }
-
+        /// <summary>
+        /// removes ice
+        /// </summary>
         public override void HoldIce()
         {
             Ice = false;
             NotifyOfPropertyChanged("Special");
         }
-
+        /// <summary>
+        /// returns the description of the drink
+        /// </summary>
         public string Description
         {
             get
@@ -98,7 +109,9 @@ namespace DinoDiner.Menu
                 return this.ToString();
             }
         }
-
+        /// <summary>
+        /// adds to the special list
+        /// </summary>
         public string[] Special
         {
             get

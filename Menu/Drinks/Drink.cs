@@ -1,4 +1,6 @@
-﻿
+﻿/* Drink.cs
+ * Ethan Kingrey
+ */
 
 using System;
 using System.Collections.Generic;
@@ -42,6 +44,9 @@ namespace DinoDiner.Menu
 
         public bool Ice { get; set; } = true;
 
+        /// <summary>
+        /// holds the ice
+        /// </summary>
         public virtual void HoldIce()
         {
             Ice = false;
