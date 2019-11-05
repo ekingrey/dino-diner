@@ -12,7 +12,10 @@ namespace DinoDiner.Menu
         /// an event handler for PropertyChanged events
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged;
-
+        /// <summary>
+        /// notifies of a property change
+        /// </summary>
+        /// <param name="propertyName"></param>
         protected void NotifyOfPropertyChanged(string propertyName)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
@@ -63,7 +66,9 @@ namespace DinoDiner.Menu
         {
             get { return this.ToString(); }
         }
-
+        /// <summary>
+        /// adds to the special list
+        /// </summary>
         public string[] Special
         {
             get
