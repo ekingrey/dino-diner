@@ -127,7 +127,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// gets the description
         /// </summary>
-        public string Description
+        public override string Description
         {
             get
             {
@@ -138,7 +138,7 @@ namespace DinoDiner.Menu
         /// <summary>
         /// adds to the special list
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

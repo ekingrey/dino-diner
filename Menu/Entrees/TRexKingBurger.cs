@@ -133,14 +133,14 @@ namespace DinoDiner.Menu
         /// <summary>
         /// returns the description
         /// </summary>
-        public string Description
+        public override string Description
         {
             get { return this.ToString(); }
         }
         /// <summary>
         /// adds to the special
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {

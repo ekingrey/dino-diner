@@ -71,18 +71,19 @@ namespace DinoDiner.Menu
             return "Brontowurst";
         }
         ///returns the description
-        public string Description
+        public override string Description
         {
             get { return this.ToString(); }
         }
         /// <summary>
         /// adds to the special list
         /// </summary>
-        public string[] Special
+        public override string[] Special
         {
             get
             {
                 List<string> special = new List<string>();
+                
                 if (!ingredients.Contains("Whole Wheat Bun"))
                 {
                     special.Add("Hold Whole Wheat Bun");

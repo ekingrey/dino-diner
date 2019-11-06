@@ -180,6 +180,7 @@ namespace Menu
             get
             {
                 List<string> special = new List<string>();
+               
                 special.AddRange(Entree.Special);
                 special.Add(Side.Description);
                 special.AddRange(Side.Special);

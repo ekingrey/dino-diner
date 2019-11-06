@@ -16,6 +16,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DinoDiner.Menu;
+using DinoDiner;
+using Menu;
 
 namespace PointOfSale
 {
@@ -62,9 +64,11 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 Brontowurst bw = new Brontowurst();
-
+                
+ 
                 NavigationService.Navigate(new CustomizePBJ(bw, true));
-                order.Add(bw);
+                CretaceousCombo cc = new CretaceousCombo(bw);
+                order.Add(cc);
             }
 
         }
