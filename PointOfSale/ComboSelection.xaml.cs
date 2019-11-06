@@ -21,11 +21,14 @@ using Menu;
 
 namespace PointOfSale
 {
+   
     /// <summary>
     /// Interaction logic for ComboSelection.xaml
     /// </summary>
     public partial class ComboSelection : Page
     {
+        private Drink drink;
+        private Side side;
         public ComboSelection()
         {
             InitializeComponent();
@@ -51,8 +54,8 @@ namespace PointOfSale
         /// <param name="args"></param>
         void SelectDrink(object sender, RoutedEventArgs args)
         {
-
-            NavigationService.Navigate(new DrinkSelection());
+            
+            NavigationService.Navigate(new DrinkSelection(drink));
 
         }
         /// <summary>
@@ -83,7 +86,9 @@ namespace PointOfSale
                 DinoNuggets dn = new DinoNuggets();
 
                 NavigationService.Navigate(new CustomizePBJ(dn, true));
-                order.Add(dn);
+                CretaceousCombo cc = new CretaceousCombo(dn);
+                order.Add(cc);
+                
             }
 
         }
@@ -98,7 +103,8 @@ namespace PointOfSale
                 PrehistoricPBJ pbj = new PrehistoricPBJ();
 
                 NavigationService.Navigate(new CustomizePBJ(pbj, true));
-                order.Add(pbj);
+                CretaceousCombo cc = new CretaceousCombo(pbj);
+                order.Add(cc);
             }
 
         }
@@ -111,7 +117,8 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 PterodactylWings entree = new PterodactylWings();
-                order.Add(entree);
+                CretaceousCombo cc = new CretaceousCombo(entree);
+                order.Add(cc);
                 NavigationService.Navigate(new CustomizeCombo());
             }
 
@@ -127,7 +134,8 @@ namespace PointOfSale
                 SteakosaurusBurger sb = new SteakosaurusBurger();
 
                 NavigationService.Navigate(new CustomizePBJ(sb, true));
-                order.Add(sb);
+                CretaceousCombo cc = new CretaceousCombo(sb);
+                order.Add(cc);
             }
 
         }
@@ -142,7 +150,8 @@ namespace PointOfSale
                 TRexKingBurger tx = new TRexKingBurger();
 
                 NavigationService.Navigate(new CustomizePBJ(tx, true));
-                order.Add(tx);
+                CretaceousCombo cc = new CretaceousCombo(tx);
+                order.Add(cc);
             }
 
         }
@@ -157,7 +166,8 @@ namespace PointOfSale
                 VelociWrap vw = new VelociWrap();
 
                 NavigationService.Navigate(new CustomizePBJ(vw, true));
-                order.Add(vw);
+                CretaceousCombo cc = new CretaceousCombo(vw);
+                order.Add(cc);
             }
 
         }
