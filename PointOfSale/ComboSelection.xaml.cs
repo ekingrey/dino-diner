@@ -27,8 +27,9 @@ namespace PointOfSale
     /// </summary>
     public partial class ComboSelection : Page
     {
-        private Drink drink;
-        private Side side;
+       // private Drink drink;
+        //private Side side;
+        private CretaceousCombo cc = new CretaceousCombo(new Brontowurst());
         public ComboSelection()
         {
             InitializeComponent();
@@ -42,7 +43,7 @@ namespace PointOfSale
         {
             if(DataContext is Entrees e)
             {
-                NavigationService.Navigate(new CustomizePBJ(e,true));
+                NavigationService.Navigate(new CustomizePBJ(e,true, cc));
             }
             
 
@@ -55,7 +56,7 @@ namespace PointOfSale
         void SelectDrink(object sender, RoutedEventArgs args)
         {
             
-            NavigationService.Navigate(new DrinkSelection(drink));
+            NavigationService.Navigate(new DrinkSelection(cc.Drink));
 
         }
         /// <summary>
@@ -67,10 +68,10 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 Brontowurst bw = new Brontowurst();
+                cc.Entree = bw;
                 
- 
-                NavigationService.Navigate(new CustomizePBJ(bw, true));
-                CretaceousCombo cc = new CretaceousCombo(bw);
+                NavigationService.Navigate(new CustomizePBJ(cc.Entree, true, this.cc));
+               // CretaceousCombo cc = new CretaceousCombo(bw);
                 order.Add(cc);
             }
 
@@ -84,9 +85,9 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 DinoNuggets dn = new DinoNuggets();
-
-                NavigationService.Navigate(new CustomizePBJ(dn, true));
-                CretaceousCombo cc = new CretaceousCombo(dn);
+                cc.Entree = dn;
+                NavigationService.Navigate(new CustomizePBJ(dn, true, cc));
+                //CretaceousCombo cc = new CretaceousCombo(dn);
                 order.Add(cc);
                 
             }
@@ -101,9 +102,9 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 PrehistoricPBJ pbj = new PrehistoricPBJ();
-
-                NavigationService.Navigate(new CustomizePBJ(pbj, true));
-                CretaceousCombo cc = new CretaceousCombo(pbj);
+                cc.Entree = pbj;
+                NavigationService.Navigate(new CustomizePBJ(pbj, true, cc));
+                //CretaceousCombo cc = new CretaceousCombo(pbj);
                 order.Add(cc);
             }
 
@@ -117,9 +118,9 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 PterodactylWings entree = new PterodactylWings();
-                CretaceousCombo cc = new CretaceousCombo(entree);
-                order.Add(cc);
-                NavigationService.Navigate(new CustomizeCombo());
+                cc.Entree = entree;
+                 order.Add(cc);
+                NavigationService.Navigate(new CustomizeCombo(cc));
             }
 
         }
@@ -132,9 +133,9 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 SteakosaurusBurger sb = new SteakosaurusBurger();
-
-                NavigationService.Navigate(new CustomizePBJ(sb, true));
-                CretaceousCombo cc = new CretaceousCombo(sb);
+                cc.Entree = sb;
+                NavigationService.Navigate(new CustomizePBJ(sb, true, cc));
+               // CretaceousCombo cc = new CretaceousCombo(sb);
                 order.Add(cc);
             }
 
@@ -148,9 +149,9 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 TRexKingBurger tx = new TRexKingBurger();
-
-                NavigationService.Navigate(new CustomizePBJ(tx, true));
-                CretaceousCombo cc = new CretaceousCombo(tx);
+                cc.Entree = tx;
+                NavigationService.Navigate(new CustomizePBJ(tx, true, cc));
+                //CretaceousCombo cc = new CretaceousCombo(tx);
                 order.Add(cc);
             }
 
@@ -164,9 +165,9 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 VelociWrap vw = new VelociWrap();
-
-                NavigationService.Navigate(new CustomizePBJ(vw, true));
-                CretaceousCombo cc = new CretaceousCombo(vw);
+                cc.Entree = vw;
+                NavigationService.Navigate(new CustomizePBJ(vw, true, cc));
+                //CretaceousCombo cc = new CretaceousCombo(vw);
                 order.Add(cc);
             }
 

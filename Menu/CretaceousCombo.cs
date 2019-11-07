@@ -32,7 +32,7 @@ namespace Menu
         /// <summary>
         /// gets and sets the entree for the combo
         /// </summary>
-        public Entrees Entree { get { return entree; } protected set
+        public Entrees Entree { get { return entree; } set
             { entree = value;
                 entree.PropertyChanged += (object sender, PropertyChangedEventArgs args) =>
                 {

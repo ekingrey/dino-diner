@@ -17,6 +17,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DDSize = DinoDiner.Menu.Size;
 using DinoDiner.Menu;
+using Menu;
 
 namespace PointOfSale
 {
@@ -27,9 +28,11 @@ namespace PointOfSale
     {
         private Side side;
         private Drink drink;
-        public CustomizeCombo()
+        private CretaceousCombo cc = new CretaceousCombo(new Brontowurst());
+        public CustomizeCombo(CretaceousCombo cc)
         {
             InitializeComponent();
+            this.cc = cc;
         }
         /// <summary>
         /// takes the user to the drink selection
@@ -39,7 +42,7 @@ namespace PointOfSale
         void SelectDrink(object sender, RoutedEventArgs args)
         {
 
-            NavigationService.Navigate(new DrinkSelection());
+            NavigationService.Navigate(new DrinkSelection(cc));
 
         }
         /// <summary>
@@ -49,7 +52,7 @@ namespace PointOfSale
         /// <param name="args"></param>
         void SelectSide(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new SideSelection());
+            NavigationService.Navigate(new SideSelection(cc.Side));
 
 
         }

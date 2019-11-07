@@ -17,6 +17,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DinoDiner.Menu;
 using DDSize = DinoDiner.Menu.Size;
+using DinoDiner;
+using Menu;
 
 namespace PointOfSale
 {
@@ -26,9 +28,17 @@ namespace PointOfSale
     public partial class DrinkSelection : Page
     {
         private Drink drink;
+        private bool combo = false;
         public DrinkSelection()
         {
             InitializeComponent();
+        }
+        private CretaceousCombo cc = new CretaceousCombo(new Brontowurst());
+        public DrinkSelection(CretaceousCombo cc)
+        {
+            InitializeComponent();
+            this.cc = cc;
+            combo = true;
         }
         /// <summary>
         /// takes the user to the drink page
@@ -39,6 +49,7 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.drink = drink;
+            combo = true;
             if (drink is Sodasaurus soda)
             {
                 sdf.IsEnabled = true;
@@ -56,13 +67,20 @@ namespace PointOfSale
             {
                 sdf.IsEnabled = true;
                 drink = new JurrasicJava();
+                cc.Drink = new JurrasicJava();
                 if (drink is JurrasicJava java)
                 {
                    
                 }
 
-                //if(drink)
-                order.Add(drink);
+                if (combo)
+                {
+                    order.Remove(cc);
+                    cc.Drink = drink;
+                    order.Add(cc);
+                }
+                else
+                    order.Add(drink);
             }
 
 
@@ -80,13 +98,20 @@ namespace PointOfSale
                 //NavigationService.Navigate(new FlavorSelection());
                 sdf.IsEnabled = true;
                 drink = new Sodasaurus();
+                cc.Drink = new Sodasaurus();
                 if (drink is Sodasaurus soda)
                 {
                     //soda.Flavor=SodasaurusFlavor(drink);
                 }
 
-                //if(drink)
-                order.Add(drink);
+                if (combo)
+                {
+                    order.Remove(cc);
+                    cc.Drink = drink;
+                    order.Add(cc);
+                }
+                else
+                    order.Add(drink);
             }
 
 
@@ -104,6 +129,7 @@ namespace PointOfSale
                 lemon.IsEnabled = true;
                 sdf.IsEnabled = true;
                 drink = new Tyrannotea();
+                
                 if (drink is Tyrannotea tea)
                 {
                     if (tea.Lemon)
@@ -111,9 +137,16 @@ namespace PointOfSale
                         tea.AddLemon();
                     }
                 }
+                if (combo)
+                {
+                    order.Remove(cc);
+                    cc.Drink = drink;
+                    order.Add(cc);
+                }
+                else
+                    order.Add(drink);
 
-                //if(drink)
-                order.Add(drink);
+
             }
 
 
@@ -130,16 +163,23 @@ namespace PointOfSale
             {
                 lemon.IsEnabled = true;
                 drink = new Water();
-                if(drink is Water water)
+                cc.Drink = new Water();
+                if (drink is Water water)
                 {
                     if (water.Lemon)
                     {
                         water.AddLemon();
                     }
                 }
-                
-                //if(drink)
-                order.Add(drink);
+
+                if (combo)
+                {
+                    order.Remove(cc);
+                    cc.Drink = drink;
+                    order.Add(cc);
+                }
+                else
+                    order.Add(drink);
             }
 
 

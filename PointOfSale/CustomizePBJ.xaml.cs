@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DinoDiner.Menu;
+using Menu;
 
 namespace PointOfSale
 {
@@ -26,15 +27,17 @@ namespace PointOfSale
     {
         private Entrees entree;
         private bool combo;
+        CretaceousCombo cc = new CretaceousCombo(new Brontowurst());
         /// <summary>
         /// the constructor
         /// </summary>
         /// <param name="entree"></param>
         /// <param name="combo"></param>
-        public CustomizePBJ(Entrees entree, bool combo)
+        public CustomizePBJ(Entrees entree, bool combo, CretaceousCombo cc)
         {
 
             InitializeComponent();
+            this.cc = cc;
             this.combo = combo;
             if (entree is PrehistoricPBJ pbj)
             {
@@ -248,7 +251,7 @@ namespace PointOfSale
         {
             if (combo)
             {
-                NavigationService.Navigate(new CustomizeCombo());
+                NavigationService.Navigate(new CustomizeCombo(cc));
             }
             else
             {
