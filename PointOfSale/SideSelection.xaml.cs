@@ -16,19 +16,34 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DinoDiner.Menu;
+using Menu;
 using DDSize =DinoDiner.Menu.Size;
 
 namespace PointOfSale
 {
+    
     /// <summary>
     /// Interaction logic for SideSelection.xaml
     /// </summary>
     public partial class SideSelection : Page
     {
         private Side side;
+        private CretaceousCombo cc = new CretaceousCombo(new Brontowurst());
+        private bool combo = false;
+
         public SideSelection()
         {
             InitializeComponent();
+        }
+
+        public SideSelection(CretaceousCombo cc)
+        {
+            InitializeComponent();
+            this.cc = cc;
+            combo = true;
+            SizeSmall.Visibility = Visibility.Hidden;
+            SizeMedium.Visibility = Visibility.Hidden;
+            SizeLarge.Visibility = Visibility.Hidden;
         }
 
         public SideSelection(Side side)
@@ -59,7 +74,14 @@ namespace PointOfSale
             if(DataContext is Order order)
             {
                 side = new Fryceritops();
-                order.Add(side);
+                if (combo)
+                {
+                    order.Remove(cc);
+                    cc.Side = side;
+                    order.Add(cc);
+                }
+                else
+                    order.Add(side);
             }
 
         }
@@ -74,7 +96,14 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 side = new MeteorMacAndCheese();
-                order.Add(side);
+                if (combo)
+                {
+                    order.Remove(cc);
+                    cc.Side = side;
+                    order.Add(cc);
+                }
+                else
+                    order.Add(side);
             }
 
         }
@@ -89,7 +118,14 @@ namespace PointOfSale
             if (DataContext is Order order)
             {
                 side = new MezzorellaSticks();
-                order.Add(side);
+                if (combo)
+                {
+                    order.Remove(cc);
+                    cc.Side = side;
+                    order.Add(cc);
+                }
+                else
+                    order.Add(side);
             }
         }
         /// <summary>
@@ -103,8 +139,15 @@ namespace PointOfSale
                 if (DataContext is Order order)
                 {
                     side = new Triceritots();
-                    order.Add(side);
+                if (combo)
+                {
+                    order.Remove(cc);
+                    cc.Side = side;
+                    order.Add(cc);
                 }
+                else
+                    order.Add(side);
+            }
 
             }
         

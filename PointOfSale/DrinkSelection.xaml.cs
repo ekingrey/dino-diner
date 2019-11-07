@@ -39,6 +39,9 @@ namespace PointOfSale
             InitializeComponent();
             this.cc = cc;
             combo = true;
+            SizeSmall.Visibility = Visibility.Hidden;
+            SizeMedium.Visibility = Visibility.Hidden;
+            SizeLarge.Visibility = Visibility.Hidden;
         }
         /// <summary>
         /// takes the user to the drink page

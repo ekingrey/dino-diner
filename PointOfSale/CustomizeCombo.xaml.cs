@@ -33,6 +33,7 @@ namespace PointOfSale
         {
             InitializeComponent();
             this.cc = cc;
+            
         }
         /// <summary>
         /// takes the user to the drink selection
@@ -52,7 +53,7 @@ namespace PointOfSale
         /// <param name="args"></param>
         void SelectSide(object sender, RoutedEventArgs args)
         {
-            NavigationService.Navigate(new SideSelection(cc.Side));
+            NavigationService.Navigate(new SideSelection(cc));
 
 
         }
