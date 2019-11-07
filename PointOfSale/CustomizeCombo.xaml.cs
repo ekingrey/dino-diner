@@ -18,6 +18,7 @@ using System.Windows.Shapes;
 using DDSize = DinoDiner.Menu.Size;
 using DinoDiner.Menu;
 using Menu;
+using Size = DinoDiner.Menu.Size;
 
 namespace PointOfSale
 {
@@ -26,8 +27,7 @@ namespace PointOfSale
     /// </summary>
     public partial class CustomizeCombo : Page
     {
-        private Side side;
-        private Drink drink;
+        
         private CretaceousCombo cc = new CretaceousCombo(new Brontowurst());
         public CustomizeCombo(CretaceousCombo cc)
         {
@@ -66,8 +66,10 @@ namespace PointOfSale
         {
             if (sender is FrameworkElement element)
             {
+                cc.Side.Size = (DDSize)Enum.Parse(typeof(DDSize), element.Tag.ToString());
+                cc.Drink.Size = (DDSize)Enum.Parse(typeof(DDSize), element.Tag.ToString());
 
-               
+
             }
         }
     }

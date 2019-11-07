@@ -255,7 +255,7 @@ namespace PointOfSale
             }
             else
             {
-                NavigationService.GoBack();
+                NavigationService.Navigate(new MenuCategorySelection());
             }
             
         }
