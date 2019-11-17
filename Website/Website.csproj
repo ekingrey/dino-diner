@@ -25,6 +25,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Menu\Menu.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\DinoDiner-29.png" />
   </ItemGroup>
 

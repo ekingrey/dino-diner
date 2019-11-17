@@ -7,7 +7,7 @@ using System.Text;
 
 namespace DinoDiner.Menu
 {
-    class Menu
+    public class Menu
     {
         /// <summary>
         /// list of availible items
