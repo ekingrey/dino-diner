@@ -8,13 +8,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <Compile Remove="Dino-Diner Website\**" />
+    <Content Remove="Dino-Diner Website\**" />
+    <EmbeddedResource Remove="Dino-Diner Website\**" />
+    <None Remove="Dino-Diner Website\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Dino-Diner Website\" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.2" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\DinoDiner-29.png" />
   </ItemGroup>
 
 </Project>
