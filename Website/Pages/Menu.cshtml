@@ -6,12 +6,80 @@
 
 <h1>Menu</h1>
 <h2>Combos</h2>
-@foreach (DinoDiner.Menu.Menu item in Model.menu)
+@foreach (IMenuItem item in Model.combo)
 {
-    <div class="menu-item">item</div>
+    <div class="menu-item">
+        @item
+        <div class="details">
+            Price: @item.Price<br />
+
+            Calories: @item.Calories<br />
+            Ingredients:
+            @foreach (string ingredient in @item.Ingredients)
+            {
+                @(ingredient + ", ")
+            }
+
+        </div>
+    </div>
+    <br />
 }
-@for(int i = 0; i < )
+
 <h2>Entrees</h2>
+@foreach (Entrees item in Model.entree)
+{
+    <div class="menu-item">
+        @item
+        <div class="details">
+            Price: @item.Price<br />
+
+            Calories: @item.Calories<br />
+            Ingredients:
+            @foreach (string ingredient in @item.Ingredients)
+            {
+                @(ingredient + ", ")
+            }
+
+        </div>
+    </div>
+    <br />
+}
 <h2>Sides</h2>
+@foreach (Side item in Model.side)
+{
+    <div class="menu-item">
+        @item
+        <div class="details">
+            Price: @item.Price<br />
+
+            Calories: @item.Calories<br />
+            Ingredients:
+            @foreach (string ingredient in @item.Ingredients)
+            {
+                @(ingredient + ", ")
+            }
+
+        </div>
+    </div>
+    <br />
+}
 <h2>Drinks</h2>
+@foreach (Drink item in Model.drink)
+{
+    <div class="menu-item">
+        @item
+        <div class="details">
+            Price: @item.Price<br />
+
+            Calories: @item.Calories<br />
+            Ingredients:
+            @foreach (string ingredient in @item.Ingredients)
+            {
+                @(ingredient + ", ")
+            }
+
+        </div>
+    </div>
+    <br />
+}
 

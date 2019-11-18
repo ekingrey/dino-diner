@@ -12,3 +12,10 @@ body {
     padding-right: 15px;
 }
 
+.menu-item {
+    font-weight: bold;
+}
+
+.details{
+    font-weight: normal;
+}

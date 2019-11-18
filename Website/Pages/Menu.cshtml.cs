@@ -11,8 +11,11 @@ namespace Website.Pages
 {
     public class MenuModel : PageModel
     {
-        private MenuItems menu { get; }
-        
+        private DinoDiner.Menu.Menu menu = new DinoDiner.Menu.Menu();
+        public List<Entrees> entree { get=> menu.AvailableEntrees; }
+        public List<Drink> drink { get => menu.AvailableDrinks; }
+        public List<Side> side { get => menu.AvailableSides; }
+        public List<IMenuItem> combo { get => menu.AvailableMenuItems; }
         public void OnGet()
         {
             
@@ -23,7 +26,7 @@ namespace Website.Pages
             
         }
 
-        public Entrees entree = menu.AvailableEntrees;//menu.AvailableEntrees;
+        //public Entrees entree = menu.AvailableEntrees;//menu.AvailableEntrees;
         
     }
 }
