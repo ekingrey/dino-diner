@@ -11,11 +11,19 @@ namespace Website.Pages
 {
     public class MenuModel : PageModel
     {
-        public  List<DinoDiner.Menu.Menu> menu { get;}
+        private MenuItems menu { get; }
         
         public void OnGet()
         {
             
         }
+        
+        public MenuModel()
+        {
+            
+        }
+
+        public Entrees entree = menu.AvailableEntrees;//menu.AvailableEntrees;
+        
     }
 }
