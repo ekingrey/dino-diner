@@ -52,7 +52,7 @@ namespace DinoDiner.Menu
                 availableItems.Add(new MezzorellaSticks());
                 availableItems.Add(new Triceritots());
 
-                return availableItems;
+                return new List<IMenuItem>(availableItems);
             }
         }
         /// <summary>
@@ -70,7 +70,7 @@ namespace DinoDiner.Menu
                 availableEntrees.Add(new TRexKingBurger());
                 availableEntrees.Add(new VelociWrap());
 
-                return availableEntrees;
+                return new List<Entrees>(availableEntrees);
             }
         }
         /// <summary>
@@ -85,7 +85,7 @@ namespace DinoDiner.Menu
                 availableSides.Add(new MezzorellaSticks());
                 availableSides.Add(new Triceritots());
 
-                return availableSides;
+                return new List<Side>(availableSides);
             }
         }
         /// <summary>
@@ -100,7 +100,7 @@ namespace DinoDiner.Menu
                 availableDrinks.Add(new Tyrannotea());
                 availableDrinks.Add(new Water());
 
-                return availableDrinks;
+                return new List<Drink>(availableDrinks);
             }
         }
         /// <summary>
