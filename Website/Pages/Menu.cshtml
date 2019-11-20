@@ -6,16 +6,17 @@
 
 <h1>Menu</h1>
 <h2>Combos</h2>
-@foreach (IMenuItem item in Model.combo)
+@foreach (Entrees item in Model.entree)
 {
     <div class="menu-item">
-        @item
+        @(Model.cc = new CretaceousCombo(item))
+        
         <div class="details">
-            Price: @item.Price<br />
+            Price: @Model.cc.Price<br />
 
-            Calories: @item.Calories<br />
+            Calories: @Model.cc.Calories<br />
             Ingredients:
-            @foreach (string ingredient in @item.Ingredients)
+            @foreach (string ingredient in @Model.cc.Ingredients)
             {
                 @(ingredient + ", ")
             }
