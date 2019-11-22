@@ -16,8 +16,8 @@ namespace Website.Pages
         public List<Entrees> entree { get=> menu.AvailableEntrees; }
         public List<Drink> drink { get => menu.AvailableDrinks; }
         public List<Side> side { get => menu.AvailableSides; }
-        public List<IMenuItem> combo { get => menu.AvailableMenuItems; }
-
+        //public List<IMenuItem> menuItems { get => menu.AvailableMenuItems; }
+        public List<string> ingredients = new List<string>();
         public CretaceousCombo cc;
 
         [BindProperty]
@@ -30,7 +30,17 @@ namespace Website.Pages
 
         public void OnGet()
         {
-            
+            foreach (Entrees item in entree)
+            {
+                foreach(string ing in item.Ingredients)
+                {
+                    if (!ingredients.Contains(ing))
+                    {
+                        ingredients.Add(ing);
+                    }
+                }
+                
+            }
         }
         
         public MenuModel()

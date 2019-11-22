@@ -88,43 +88,56 @@
             <form method="post">
                 <h4>Search</h4>
                 <input type="text" name="search" value="@Model.search" />
-                <input type="submit" value="Apply Filter(s)" />
+                <input type="submit" name="filter" id="filter" value="Apply Filter(s)" />
 
                 <h4> Menu Catagory</h4>
 
-                <div class="checkbox-list">
+                <div class="menu-category">
 
                     <label>
-                        <input name="menuItem" type="checkbox" value="Combo" />
+                        <input name="menuCategory" type="checkbox" value="Combo" />
                         Combo
                     </label>
                     <label>
-                        <input name="menuItem" type="checkbox" value="Entree" />
+                        <input name="menuCategory" type="checkbox" value="Entree" />
                         Entree
                     </label>
                     <label>
-                        <input name="menuItem" type="checkbox" value="Side" />
+                        <input name="menuCategory" type="checkbox" value="Side" />
                         Side
                     </label>
 
                     <label>
-                        <input name="menuItem" type="checkbox" value="Drink" />
+                        <input name="menuCategory" type="checkbox" value="Drink" />
                         Drink
                     </label>
 
                     <h4>Cost</h4>
                     <label>
                         Min
-                        <input type="number" min="0" max="10" step="0.1" name="minCost" value="@Model.search" />
-                        
-                    </label>
-                    <label>
+                        <input type="number" min="0" max="10" step="0.1" id="minimum-Price" name="minimumPrice" value="@Model.search" />
+                        <br />
                         Max
-                        <input type="number" min="0" max="10" step="0.1" name="maxCost" value="@Model.search" />
+                        <input type="number" min="0" max="10" step="0.1" id="maximum-Price" name="maximumPrice" value="@Model.search" />
+
                     </label>
+                    
 
-                </div>
+                    <h4> Exclude Ingredient</h4>
 
-            </form>
+                    <div class="exclude-ingredient">
+                        @for (int i = 0; i < Model.ingredients.Count(); i++)
+                        {
+                        <label>
+                            <input name="@Model.ingredients[i]" type="checkbox" value="@Model.ingredients[i]" />
+                            @Model.ingredients[i] <br />
+                        </label>
+                        }
+
+
+
+                    </div>
+
+</form>
         
      </div>
