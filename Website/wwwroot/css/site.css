@@ -16,6 +16,37 @@ body {
     font-weight: bold;
 }
 
-.details{
+
+
+.details {
     font-weight: normal;
+}
+
+h4 {
+    margin-bottom: 5px;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 100vw;
+    background-color: antiquewhite;
+}
+
+.itemContent {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100vw;
+}
+
+.checkbox-list {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    width: 300px;
+    background-color: darkolivegreen;
+    flex-grow: 0;
+    padding: 50px;
 }

@@ -20,6 +20,14 @@ namespace Website.Pages
 
         public CretaceousCombo cc;
 
+        [BindProperty]
+        public string search { get; set; }
+
+        [BindProperty]
+        public float? minCost { get; set; }
+        [BindProperty]
+        public float? maxCost { get; set; }
+
         public void OnGet()
         {
             
