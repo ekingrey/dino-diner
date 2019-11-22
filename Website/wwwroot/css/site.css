@@ -51,7 +51,8 @@ h4 {
 }
 
 form {
-    width: 300px;
+
+    width: 500px;
     background-color: darkolivegreen;
     flex-grow: 0;
     padding: 50px;

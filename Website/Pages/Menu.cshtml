@@ -7,7 +7,7 @@
         <div class="itemContent">
             <h1>Menu</h1>
 
-            @if (Model.entree.Count() != 0)
+            @if (Model.entree.Count() != 0 && (Model.menuCategory.Contains("Combo") || Model.menuCategory.Count == 0))
             {
                 <h2>Combos</h2>
                 @foreach (IMenuItem item in Model.menuItems)
@@ -36,7 +36,7 @@
             }
 
 
-            @if (Model.entree.Count() != 0)
+            @if (Model.entree.Count() != 0 && (Model.menuCategory.Contains("Entree") || Model.menuCategory.Count == 0))
             {
                 <h2>Entrees</h2>
 
@@ -130,20 +130,20 @@
 
                     <label>
                         <input name="menuCategory" type="checkbox" value="Combo" />
-                        Combo
+                        Combo<br />
                     </label>
                     <label>
                         <input name="menuCategory" type="checkbox" value="Entree" />
-                        Entree
+                        Entree<br />
                     </label>
                     <label>
                         <input name="menuCategory" type="checkbox" value="Side" />
-                        Side
+                        Side<br />
                     </label>
 
                     <label>
                         <input name="menuCategory" type="checkbox" value="Drink" />
-                        Drink
+                        Drink<br />
                     </label>
 
                     <h4>Cost</h4>
@@ -163,7 +163,7 @@
                         @for (int i = 0; i < Model.ingredients.Count(); i++)
                         {
                         <label>
-                            <input name="@Model.ingredients[i]" type="checkbox" value="@Model.ingredients[i]" />
+                            <input name="ingredientsList" type="checkbox" value="@Model.ingredients[i]" />
                             @Model.ingredients[i] <br />
                         </label>
                         }

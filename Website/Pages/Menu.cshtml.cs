@@ -89,6 +89,7 @@ namespace Website.Pages
         /// <summary>
         /// gets a list of all ingredients items
         /// </summary>
+        
         public List<string> ingredients { get => menu.AvailableIngredients; }
 
         public CretaceousCombo cc;
@@ -97,12 +98,17 @@ namespace Website.Pages
         public string search { get; set; }
 
         [BindProperty]
-        public List<string> menuCategory { get; set; } = new List<string>();
+        public List<string> ingredientsList { get; set; } = new List<string>();
 
         [BindProperty]
-        public float? minCost { get; set; }
+        public List<string> menuCategory { get; set; } = new List<string>();
+
+        
+
         [BindProperty]
-        public float? maxCost { get; set; }
+        public float? minimumPrice { get; set; }
+        [BindProperty]
+        public float? maximumPrice { get; set; }
 
         public void OnGet()
         {
@@ -117,18 +123,26 @@ namespace Website.Pages
             {
                 menuItems = Search(menuItems, search);
             }
-            //if (menuCategory.Count != 0)
-            //{
-            //    menuItems = MovieDatabase.FilterByMPAA(Movies, rating);
-            //}
-            //if (minCost != null)
-            //{
-            //    menuItems = MovieDatabase.FilterByMinimumIMDB(Movies, (float)minIMDB);
-            //}
-            //if (maxCost != null)
-            //{
-            //    menuItems = MovieDatabase.FilterByMaximumIMDB(Movies, (float)maxIMDB);
-            //}
+            if (menuCategory.Count != 0)
+            {
+                menuItems = FilterByType(menuItems, menuCategory);
+            }
+            if (minimumPrice != null)
+            {
+                menuItems = FilterByMinimumCost(menuItems, (float)minimumPrice);
+            }
+            if (maximumPrice != null)
+            {
+                menuItems = FilterByMaximumCost(menuItems, (float)maximumPrice);
+            }
+            if (menuCategory.Count != 0)
+            {
+                menuItems = FilterByType(menuItems, menuCategory);
+            }
+            if (ingredientsList.Count != 0)
+            {
+                menuItems = FilterByIngredients(menuItems, ingredientsList);
+            }
         }
 
         public MenuModel()
@@ -136,6 +150,12 @@ namespace Website.Pages
             
         }
 
+        /// <summary>
+        /// finds all menu items that mathc the search constraint
+        /// </summary>
+        /// <param name="items"> the list in menu items</param>
+        /// <param name="term"> the search term</param>
+        /// <returns></returns>
         public static List<IMenuItem> Search(List<IMenuItem> items, string term)
         {
             List<IMenuItem> result = new List<IMenuItem>();
@@ -166,6 +186,119 @@ namespace Website.Pages
 
             }
 
+            return result;
+        }
+
+        /// <summary>
+        /// filters by the type of menu item(combo, entree, drink, side)
+        /// </summary>
+        /// <param name="items">teh list of menu items</param>
+        /// <param name="catagory">teh search term</param>
+        /// <returns></returns>
+        public static List<IMenuItem> FilterByType(List<IMenuItem> items, List<string> catagory)
+        {
+            List<IMenuItem> result = new List<IMenuItem>();
+
+            foreach (IMenuItem item in items)
+            {
+                if (item is Entrees && (catagory.Contains("Entree") || catagory.Contains("Combo")))
+                {
+                    
+                        result.Add(item);
+                   
+                }
+                if (item is Side  && catagory.Contains("Side"))
+                {
+                    
+                        result.Add(item);
+                    
+                }
+                if (item is Drink  && catagory.Contains("Drink"))
+                {
+                    
+                        result.Add(item);
+                    
+                }
+
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// filters by a minimum cost
+        /// </summary>
+        /// <param name="items">list of menu items</param>
+        /// <param name="minCost">min cost</param>
+        /// <returns></returns>
+        public static List<IMenuItem> FilterByMinimumCost(List<IMenuItem> items, float minCost)
+        {
+            List<IMenuItem> result = new List<IMenuItem>();
+
+            foreach (IMenuItem item in items)
+            {
+                if (item.Price >= minCost)
+                {
+                    result.Add(item);
+                }
+
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// filters by a maximum cost
+        /// </summary>
+        /// <param name="items">list of menu items</param>
+        /// <param name="maxCost">max cost</param>
+        /// <returns></returns>
+        public static List<IMenuItem> FilterByMaximumCost(List<IMenuItem> items, float maxCost)
+        {
+            List<IMenuItem> result = new List<IMenuItem>();
+
+            foreach (IMenuItem item in items)
+            {
+                if (item.Price <= maxCost)
+                {
+                    result.Add(item);
+                }
+
+            }
+            return result;
+        }
+
+
+        public static List<IMenuItem> FilterByIngredients(List<IMenuItem> items, List<string> list)
+        {
+            List<IMenuItem> result = new List<IMenuItem>();
+
+            foreach (IMenuItem item in items)
+            {
+                if (item is Entrees e)
+                {
+                    foreach(string i in e.Ingredients)
+                    {
+                        if (!list.Contains(i))
+                        {
+                            result.Add(item);
+                        }
+                    }
+                    
+
+                }
+                //if (item is Side s && list.Contains("Side"))
+                //{
+
+                //    result.Add(item);
+
+                //}
+                //if (item is Drink d && list.Contains("Drink"))
+                //{
+
+                //    result.Add(item);
+
+                //}
+
+            }
             return result;
         }
     }
