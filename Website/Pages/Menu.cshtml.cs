@@ -269,7 +269,7 @@ namespace Website.Pages
 
         public static List<IMenuItem> FilterByIngredients(List<IMenuItem> items, List<string> list)
         {
-            List<IMenuItem> result = new List<IMenuItem>();
+            List<IMenuItem> result = new List<IMenuItem>(items);
 
             foreach (IMenuItem item in items)
             {
@@ -277,26 +277,39 @@ namespace Website.Pages
                 {
                     foreach(string i in e.Ingredients)
                     {
-                        if (!list.Contains(i))
+                        if (list.Contains(i))
                         {
-                            result.Add(item);
+                            result.Remove(item);
                         }
                     }
                     
 
                 }
-                //if (item is Side s && list.Contains("Side"))
-                //{
+                if (item is Drink d)
+                {
+                    foreach (string i in d.Ingredients)
+                    {
+                        if (list.Contains(i))
+                        {
+                            result.Remove(item);
+                        }
+                    }
 
-                //    result.Add(item);
 
-                //}
-                //if (item is Drink d && list.Contains("Drink"))
-                //{
+                }
+                if (item is Side s)
+                {
+                    foreach (string i in s.Ingredients)
+                    {
+                        if (list.Contains(i))
+                        {
+                            result.Remove(item);
+                        }
+                    }
 
-                //    result.Add(item);
 
-                //}
+                }
+                
 
             }
             return result;
