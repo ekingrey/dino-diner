@@ -28,7 +28,8 @@ namespace DinoDiner.Menu
 
         private List<string> ingredients = new List<string>();
 
-        public List<string> AvailableIngredients {
+        public List<string> PossibleIngredients
+        {
             get {
 
                 foreach (IMenuItem item in AvailableMenuItems)

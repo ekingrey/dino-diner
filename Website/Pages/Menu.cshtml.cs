@@ -90,7 +90,7 @@ namespace Website.Pages
         /// gets a list of all ingredients items
         /// </summary>
         
-        public List<string> ingredients { get => menu.AvailableIngredients; }
+        public List<string> ingredients { get => menu.PossibleIngredients; }
 
         public CretaceousCombo cc;
 
@@ -266,7 +266,12 @@ namespace Website.Pages
             return result;
         }
 
-
+        /// <summary>
+        /// filters by ingredients
+        /// </summary>
+        /// <param name="items">a list of menu items</param>
+        /// <param name="list">list of constraints</param>
+        /// <returns></returns>
         public static List<IMenuItem> FilterByIngredients(List<IMenuItem> items, List<string> list)
         {
             List<IMenuItem> result = new List<IMenuItem>(items);

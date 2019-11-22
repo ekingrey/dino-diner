@@ -129,30 +129,30 @@
                 <div class="menu-category">
 
                     <label>
-                        <input name="menuCategory" type="checkbox" value="Combo" />
+                        <input name="menuCategory" type="checkbox" value="Combo" checked="@Model.menuCategory.Contains("Combo")"/>
                         Combo<br />
                     </label>
                     <label>
-                        <input name="menuCategory" type="checkbox" value="Entree" />
+                        <input name="menuCategory" type="checkbox" value="Entree" checked="@Model.menuCategory.Contains("Entree")"/>
                         Entree<br />
                     </label>
                     <label>
-                        <input name="menuCategory" type="checkbox" value="Side" />
+                        <input name="menuCategory" type="checkbox" value="Side" checked="@Model.menuCategory.Contains("Side")"/>
                         Side<br />
                     </label>
 
                     <label>
-                        <input name="menuCategory" type="checkbox" value="Drink" />
+                        <input name="menuCategory" type="checkbox" value="Drink" checked="@Model.menuCategory.Contains("Drink")"/>
                         Drink<br />
                     </label>
 
                     <h4>Cost</h4>
                     <label>
                         Min
-                        <input type="number" min="0" max="10" step="0.1" id="minimum-Price" name="minimumPrice" value="@Model.search" />
+                        <input type="number" min="0" max="10" step="0.1" id="minimum-Price" name="minimumPrice" value="@Model.minimumPrice" />
                         <br />
                         Max
-                        <input type="number" min="0" max="10" step="0.1" id="maximum-Price" name="maximumPrice" value="@Model.search" />
+                        <input type="number" min="0" max="10" step="0.1" id="maximum-Price" name="maximumPrice" value="@Model.maximumPrice" />
 
                     </label>
                     
@@ -163,7 +163,7 @@
                         @for (int i = 0; i < Model.ingredients.Count(); i++)
                         {
                         <label>
-                            <input name="ingredientsList" type="checkbox" value="@Model.ingredients[i]" />
+                            <input name="ingredientsList" type="checkbox" value="@Model.ingredients[i]" checked="@Model.ingredientsList.Contains(@Model.ingredients[i])"/>
                             @Model.ingredients[i] <br />
                         </label>
                         }
