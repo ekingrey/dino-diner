@@ -26,6 +26,27 @@ namespace DinoDiner.Menu
         /// </summary>
         private List<Drink> availableDrinks = new List<Drink>();
 
+        private List<string> ingredients = new List<string>();
+
+        public List<string> AvailableIngredients {
+            get {
+
+                foreach (IMenuItem item in AvailableMenuItems)
+                {
+                    foreach (string ing in item.Ingredients)
+                    {
+                        if (!ingredients.Contains(ing))
+                        {
+                            ingredients.Add(ing);
+                        }
+                    }
+
+                }
+                ingredients.Sort();
+                return new List<string>(ingredients);
+            }
+        }
+
         /// <summary>
         /// crates a list of availible items
         /// </summary>
@@ -34,10 +55,7 @@ namespace DinoDiner.Menu
             get
             {
                 
-                availableItems.Add(new JurrasicJava());
-                availableItems.Add(new Sodasaurus());
-                availableItems.Add(new Tyrannotea());
-                availableItems.Add(new Water());
+                
 
                 availableItems.Add(new Brontowurst());
                 availableItems.Add(new DinoNuggets());
@@ -51,6 +69,11 @@ namespace DinoDiner.Menu
                 availableItems.Add(new MeteorMacAndCheese());
                 availableItems.Add(new MezzorellaSticks());
                 availableItems.Add(new Triceritots());
+
+                availableItems.Add(new JurrasicJava());
+                availableItems.Add(new Sodasaurus());
+                availableItems.Add(new Tyrannotea());
+                availableItems.Add(new Water());
 
                 return new List<IMenuItem>(availableItems);
             }

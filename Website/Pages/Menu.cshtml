@@ -6,84 +6,118 @@
     <div class="content">
         <div class="itemContent">
             <h1>Menu</h1>
-            <h2>Combos</h2>
-            @foreach (Entrees item in Model.entree)
+
+            @if (Model.entree.Count() != 0)
             {
-                <div class="menu-item">
-                    @(Model.cc = new CretaceousCombo(item))
+                <h2>Combos</h2>
+                @foreach (IMenuItem item in Model.menuItems)
+                {
+                    @if (item is Entrees entree)
+                    {
+                        <div class="menu-item">
+                            @(Model.cc = new CretaceousCombo(entree))
 
-                    <div class="details">
-                        Price: @Model.cc.Price<br />
+                            <div class="details">
+                                Price: @Model.cc.Price<br />
 
-                        Calories: @Model.cc.Calories<br />
-                        Ingredients:
-                        @foreach (string ingredient in @Model.cc.Ingredients)
-                        {
-                            @(ingredient + ", ")
-                        }
+                                Calories: @Model.cc.Calories<br />
+                                Ingredients:
+                                @foreach (string ingredient in @Model.cc.Ingredients)
+                                {
+                                    @(ingredient + ", ")
+                                }
 
-                    </div>
-                </div>
-                <br />
+                            </div>
+                        </div>
+                        <br />
+                    }
+
+                }
             }
 
-            <h2>Entrees</h2>
-            @foreach (Entrees item in Model.entree)
+
+            @if (Model.entree.Count() != 0)
             {
-                <div class="menu-item">
-                    @item
-                    <div class="details">
-                        Price: @item.Price<br />
+                <h2>Entrees</h2>
 
-                        Calories: @item.Calories<br />
-                        Ingredients:
-                        @foreach (string ingredient in @item.Ingredients)
-                        {
-                            @(ingredient + ", ")
-                        }
+                @foreach (IMenuItem item in Model.menuItems)
+                {
+                    @if (item is Entrees entree)
+                    {
+                        <div class="menu-item">
+                            @entree
+                            <div class="details">
+                                Price: @entree.Price<br />
 
-                    </div>
-                </div>
-                <br />
+                                Calories: @entree.Calories<br />
+                                Ingredients:
+                                @foreach (string ingredient in entree.Ingredients)
+                                {
+                                    @(ingredient + ", ")
+                                }
+
+                            </div>
+                        </div>
+                        <br />
+                    }
+
+                }
             }
-            <h2>Sides</h2>
-            @foreach (Side item in Model.side)
+
+            @if (Model.side.Count() != 0)
             {
-                <div class="menu-item">
-                    @item
-                    <div class="details">
-                        Price: @item.Price<br />
+                <h2>Sides</h2>
+                @foreach (IMenuItem item in Model.menuItems)
+                {
+                    @if (item is Side side)
+                    {
+                        <div class="menu-item">
+                            @side
+                            <div class="details">
+                                Price: @side.Price<br />
 
-                        Calories: @item.Calories<br />
-                        Ingredients:
-                        @foreach (string ingredient in @item.Ingredients)
-                        {
-                            @(ingredient + ", ")
-                        }
+                                Calories: @side.Calories<br />
+                                Ingredients:
+                                @foreach (string ingredient in side.Ingredients)
+                                {
+                                    @(ingredient + ", ")
+                                }
 
-                    </div>
-                </div>
-                <br />
+                            </div>
+                        </div>
+                        <br />
+                    }
+
+                }
             }
-            <h2>Drinks</h2>
-            @foreach (Drink item in Model.drink)
+
+            @if (Model.drink.Count() != 0)
             {
-                <div class="menu-item">
-                    @item
-                    <div class="details">
-                        Price: @item.Price<br />
+                <h2>Drinks</h2>
+                @foreach (IMenuItem item in Model.menuItems)
+                {
+                    @if (item is Drink drink)
+                    {
+                        <div class="menu-item">
+                            @drink
+                            <div class="details">
+                                Price: @drink.Price<br />
 
-                        Calories: @item.Calories<br />
-                        Ingredients:
-                        @foreach (string ingredient in @item.Ingredients)
-                        {
-                            @(ingredient + ", ")
-                        }
+                                Calories: @drink.Calories<br />
+                                Ingredients:
+                                @foreach (string ingredient in drink.Ingredients)
+                                {
+                                    @(ingredient + ", ")
+                                }
 
-                    </div>
-                </div>
-                <br />
+                            </div>
+                        </div>
+                        <br />
+                    }
+
+                }
             }
+
         </div>
             <form method="post">
                 <h4>Search</h4>

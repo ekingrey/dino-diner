@@ -21,6 +21,13 @@ body {
     font-weight: normal;
 }
 
+h2 {
+    margin-bottom: 5px;
+    font-weight: bold;
+    border-bottom: solid;
+    border-bottom-color:black;
+}
+
 h4 {
     margin-bottom: 5px;
 }
