@@ -174,30 +174,37 @@ namespace Website.Pages
                 //menuItems = FilterByIngredients(menuItems, ingredientsList);
                 menuItems = menuItems.Where(item =>
                 {
-                    
-                    if (item is Entrees entree)
+                    List<IMenuItem> list = new List<IMenuItem>();
+                    foreach (string i in item.Ingredients)
                     {
-                        foreach (string i in entree.Ingredients)
-                        {
-                            return ingredientsList.Contains(i);
-                        }
-                            
+                        if (ingredientsList.Contains(i))
+                            return false;
                     }
-                    else if (item is Side side)
-                    {
-                        foreach (string i in side.Ingredients)
-                        {
-                            return ingredientsList.Contains(i);
-                        }
-                    }
-                    else
-                    {
-                        Drink drink = (Drink)item;
-                        foreach (string i in drink.Ingredients)
-                        {
-                            return ingredientsList.Contains(i);
-                        }
-                    }
+                    return true;
+                    //if (item is Entrees entree)
+                    //{
+                    //    return ingredientsList.Contains(item.Ingredients);
+                    //    foreach (string i in entree.Ingredients)
+                    //    {
+                    //        return ingredientsList.Contains(i);
+                    //    }
+
+                    //}
+                    //else if (item is Side side)
+                    //{
+                    //    foreach (string i in side.Ingredients)
+                    //    {
+                    //        return ingredientsList.Contains(i);
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    Drink drink = (Drink)item;
+                    //    foreach (string i in drink.Ingredients)
+                    //    {
+                    //        return ingredientsList.Contains(i);
+                    //    }
+                    //}
                 });
             }
         }
