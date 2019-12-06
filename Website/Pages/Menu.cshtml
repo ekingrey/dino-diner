@@ -16,22 +16,48 @@
                     {
                         <div class="menu-item">
                             @(Model.cc = new CretaceousCombo(entree))
-
+                            
                             <div class="details">
-                                Price: @Model.cc.Price<br />
 
-                                Calories: @Model.cc.Calories<br />
+                                <table >
+                                    <tr>
+                                        <th class="grid-item">Size</th>
+                                        <th class="grid-item">Price</th>
+                                        <th class="grid-item">Calories</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="grid-item">Small</td>
+                                        <td class="grid-item">@Model.cc.Price</td>
+                                        <td class="grid-item">@Model.cc.Calories</td>
+                                        
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="grid-item">@(Model.cc.Size = Size.Medium)</td>
+                                        <td class="grid-item">@Model.cc.Price</td>
+                                        <td class="grid-item">@Model.cc.Calories</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="grid-item">@(Model.cc.Size = Size.Large)</td>
+                                        <td class="grid-item">@Model.cc.Price</td>
+                                        <td class="grid-item">@Model.cc.Calories</td>
+                                    </tr>
+
+                                </table>
+
+                               
                                 Ingredients:
                                 <ul>
                                     @foreach (string ingredient in @Model.cc.Ingredients)
                                     {
-                                    <li>
-                                        @(ingredient )
-                                    </li>
-                                    
+                                        <li>
+                                            @(ingredient)
+                                        </li>
+
                                     }
                                 </ul>
-                                
+
 
                             </div>
                         </div>
@@ -85,9 +111,32 @@
                         <div class="menu-item">
                             @side
                             <div class="details">
-                                Price: @side.Price<br />
+                                <table>
+                                    <tr>
+                                        <th class="grid-item">Size</th>
+                                        <th class="grid-item">Price</th>
+                                        <th class="grid-item">Calories</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="grid-item">Small</td>
+                                        <td class="grid-item">@side.Price</td>
+                                        <td class="grid-item">@side.Calories</td>
 
-                                Calories: @side.Calories<br />
+                                    </tr>
+
+                                    <tr>
+                                        <td class="grid-item">@(side.Size = Size.Medium)</td>
+                                        <td class="grid-item">@side.Price</td>
+                                        <td class="grid-item">@side.Calories</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="grid-item">@(side.Size = Size.Large)</td>
+                                        <td class="grid-item">@side.Price</td>
+                                        <td class="grid-item">@side.Calories</td>
+                                    </tr>
+
+                                </table>
                                 Ingredients:
                                 <ul>
                                     @foreach (string ingredient in side.Ingredients)
@@ -117,9 +166,33 @@
                         <div class="menu-item">
                             @drink
                             <div class="details">
-                                Price: @drink.Price<br />
+                                <table>
+                                    <tr>
+                                        <th class="grid-item">Size</th>
+                                        <th class="grid-item">Price</th>
+                                        <th class="grid-item">Calories</th>
+                                    </tr>
+                                    <tr>
+                                        <td class="grid-item">Small</td>
+                                        <td class="grid-item">@drink.Price</td>
+                                        <td class="grid-item">@drink.Calories</td>
 
-                                Calories: @drink.Calories<br />
+                                    </tr>
+
+                                    <tr>
+                                        <td class="grid-item">@(drink.Size = Size.Medium)</td>
+                                        <td class="grid-item">@drink.Price</td>
+                                        <td class="grid-item">@drink.Calories</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="grid-item">@(drink.Size = Size.Large)</td>
+                                        <td class="grid-item">@drink.Price</td>
+                                        <td class="grid-item">@drink.Calories</td>
+                                    </tr>
+
+                                </table>
+                                
                                 Ingredients:
                                 <ul>
                                     @foreach (string ingredient in drink.Ingredients)

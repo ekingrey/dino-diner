@@ -51,7 +51,23 @@ h4 {
     flex-direction: column;
 }
 
+table {
+    border-collapse: collapse;
+}
 
+th,
+td {
+    border: 1px solid #cecfd5;
+    padding: 10px 15px;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+}
 
 form {
     width: 150px;
