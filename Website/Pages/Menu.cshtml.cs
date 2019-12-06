@@ -171,7 +171,6 @@ namespace Website.Pages
             }
             if (ingredientsList.Count != 0)
             {
-                //menuItems = FilterByIngredients(menuItems, ingredientsList);
                 menuItems = menuItems.Where(item =>
                 {
                     List<IMenuItem> list = new List<IMenuItem>();
@@ -181,30 +180,7 @@ namespace Website.Pages
                             return false;
                     }
                     return true;
-                    //if (item is Entrees entree)
-                    //{
-                    //    return ingredientsList.Contains(item.Ingredients);
-                    //    foreach (string i in entree.Ingredients)
-                    //    {
-                    //        return ingredientsList.Contains(i);
-                    //    }
-
-                    //}
-                    //else if (item is Side side)
-                    //{
-                    //    foreach (string i in side.Ingredients)
-                    //    {
-                    //        return ingredientsList.Contains(i);
-                    //    }
-                    //}
-                    //else
-                    //{
-                    //    Drink drink = (Drink)item;
-                    //    foreach (string i in drink.Ingredients)
-                    //    {
-                    //        return ingredientsList.Contains(i);
-                    //    }
-                    //}
+                   
                 });
             }
         }
@@ -214,174 +190,6 @@ namespace Website.Pages
             
         }
 
-        /// <summary>
-        /// finds all menu items that mathc the search constraint
-        /// </summary>
-        /// <param name="items"> the list in menu items</param>
-        /// <param name="term"> the search term</param>
-        /// <returns></returns>
-        //public static List<IMenuItem> Search(List<IMenuItem> items, string term)
-        //{
-        //    List<IMenuItem> result = new List<IMenuItem>();
-
-        //    foreach (IMenuItem item in items)
-        //    {
-        //        if(item is Entrees entree)
-        //        {
-        //            if (entree.Description.Contains(term, StringComparison.OrdinalIgnoreCase))
-        //            {
-        //                result.Add(item);
-        //            }
-        //        }
-        //        if (item is Side side)
-        //        {
-        //            if (side.Description.Contains(term, StringComparison.OrdinalIgnoreCase))
-        //            {
-        //                result.Add(item);
-        //            }
-        //        }
-        //        if (item is Drink drink)
-        //        {
-        //            if (drink.Description.Contains(term, StringComparison.OrdinalIgnoreCase))
-        //            {
-        //                result.Add(item);
-        //            }
-        //        }
-
-        //    }
-
-        //    return result;
-        //}
-
-        /// <summary>
-        /// filters by the type of menu item(combo, entree, drink, side)
-        /// </summary>
-        /// <param name="items">teh list of menu items</param>
-        /// <param name="catagory">teh search term</param>
-        /// <returns></returns>
-        //public static List<IMenuItem> FilterByType(List<IMenuItem> items, List<string> catagory)
-        //{
-        //    List<IMenuItem> result = new List<IMenuItem>();
-
-        //    foreach (IMenuItem item in items)
-        //    {
-        //        if (item is Entrees && (catagory.Contains("Entree") || catagory.Contains("Combo")))
-        //        {
-                    
-        //                result.Add(item);
-                   
-        //        }
-        //        if (item is Side  && catagory.Contains("Side"))
-        //        {
-                    
-        //                result.Add(item);
-                    
-        //        }
-        //        if (item is Drink  && catagory.Contains("Drink"))
-        //        {
-                    
-        //                result.Add(item);
-                    
-        //        }
-
-        //    }
-        //    return result;
-        //}
-
-        /// <summary>
-        /// filters by a minimum cost
-        /// </summary>
-        /// <param name="items">list of menu items</param>
-        /// <param name="minCost">min cost</param>
-        /// <returns></returns>
-        //public static List<IMenuItem> FilterByMinimumCost(List<IMenuItem> items, float minCost)
-        //{
-        //    List<IMenuItem> result = new List<IMenuItem>();
-
-        //    foreach (IMenuItem item in items)
-        //    {
-        //        if (item.Price >= minCost)
-        //        {
-        //            result.Add(item);
-        //        }
-
-        //    }
-        //    return result;
-        //}
-
-        /// <summary>
-        /// filters by a maximum cost
-        /// </summary>
-        /// <param name="items">list of menu items</param>
-        /// <param name="maxCost">max cost</param>
-        /// <returns></returns>
-        //public static List<IMenuItem> FilterByMaximumCost(List<IMenuItem> items, float maxCost)
-        //{
-        //    List<IMenuItem> result = new List<IMenuItem>();
-
-        //    foreach (IMenuItem item in items)
-        //    {
-        //        if (item.Price <= maxCost)
-        //        {
-        //            result.Add(item);
-        //        }
-
-        //    }
-        //    return result;
-        //}
-
-        /// <summary>
-        /// filters by ingredients
-        /// </summary>
-        /// <param name="items">a list of menu items</param>
-        /// <param name="list">list of constraints</param>
-        /// <returns></returns>
-        //public static List<IMenuItem> FilterByIngredients(List<IMenuItem> items, List<string> list)
-        //{
-        //    List<IMenuItem> result = new List<IMenuItem>(items);
-
-        //    foreach (IMenuItem item in items)
-        //    {
-        //        if (item is Entrees e)
-        //        {
-        //            foreach(string i in e.Ingredients)
-        //            {
-        //                if (list.Contains(i))
-        //                {
-        //                    result.Remove(item);
-        //                }
-        //            }
-                    
-
-        //        }
-        //        if (item is Drink d)
-        //        {
-        //            foreach (string i in d.Ingredients)
-        //            {
-        //                if (list.Contains(i))
-        //                {
-        //                    result.Remove(item);
-        //                }
-        //            }
-
-
-        //        }
-        //        if (item is Side s)
-        //        {
-        //            foreach (string i in s.Ingredients)
-        //            {
-        //                if (list.Contains(i))
-        //                {
-        //                    result.Remove(item);
-        //                }
-        //            }
-
-
-        //        }
-                
-
-        //    }
-        //    return result;
-        //}
+        
     }
 }
