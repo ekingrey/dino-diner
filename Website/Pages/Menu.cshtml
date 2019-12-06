@@ -4,7 +4,7 @@
     ViewData["Title"] = "Menu";
 }
     <div class="content">
-        <div class="itemContent">
+        <div class="itemContent" >
             <h1>Menu</h1>
 
             @if (Model.entree.Count() != 0 && (Model.menuCategory.Contains("Combo") || Model.menuCategory.Count == 0))
@@ -22,10 +22,16 @@
 
                                 Calories: @Model.cc.Calories<br />
                                 Ingredients:
-                                @foreach (string ingredient in @Model.cc.Ingredients)
-                                {
-                                    @(ingredient + ", ")
-                                }
+                                <ul>
+                                    @foreach (string ingredient in @Model.cc.Ingredients)
+                                    {
+                                    <li>
+                                        @(ingredient )
+                                    </li>
+                                    
+                                    }
+                                </ul>
+                                
 
                             </div>
                         </div>
@@ -51,10 +57,15 @@
 
                                 Calories: @entree.Calories<br />
                                 Ingredients:
-                                @foreach (string ingredient in entree.Ingredients)
-                                {
-                                    @(ingredient + ", ")
-                                }
+                                <ul>
+                                    @foreach (string ingredient in entree.Ingredients)
+                                    {
+                                        <li>
+                                            @(ingredient)
+                                        </li>
+
+                                    }
+                                </ul>
 
                             </div>
                         </div>
@@ -78,10 +89,15 @@
 
                                 Calories: @side.Calories<br />
                                 Ingredients:
-                                @foreach (string ingredient in side.Ingredients)
-                                {
-                                    @(ingredient + ", ")
-                                }
+                                <ul>
+                                    @foreach (string ingredient in side.Ingredients)
+                                    {
+                                        <li>
+                                            @(ingredient)
+                                        </li>
+
+                                    }
+                                </ul>
 
                             </div>
                         </div>
@@ -105,10 +121,15 @@
 
                                 Calories: @drink.Calories<br />
                                 Ingredients:
-                                @foreach (string ingredient in drink.Ingredients)
-                                {
-                                    @(ingredient + ", ")
-                                }
+                                <ul>
+                                    @foreach (string ingredient in drink.Ingredients)
+                                    {
+                                        <li>
+                                            @(ingredient)
+                                        </li>
+
+                                    }
+                                </ul>
 
                             </div>
                         </div>
@@ -119,7 +140,7 @@
             }
 
         </div>
-            <form method="post">
+            <form method="post" class="searchBar">
                 <h4>Search</h4>
                 <input type="text" name="search" value="@Model.search" />
                 <input type="submit" name="filter" id="filter" value="Apply Filter(s)" />

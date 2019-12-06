@@ -42,6 +42,7 @@ h4 {
 .itemContent {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     padding-bottom: 100vw;
 }
 
@@ -50,10 +51,11 @@ h4 {
     flex-direction: column;
 }
 
-form {
 
-    width: 500px;
+
+form {
+    width: 150px;
     background-color: darkolivegreen;
-    flex-grow: 0;
+    flex-grow: 1;
     padding: 50px;
 }
